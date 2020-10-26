@@ -1,0 +1,60 @@
+/*Post do Blog*/
+
+.titulo-noticia {
+    margin-top: 40px;
+    background-image: url("https://www.gannett-cdn.com/presto/2020/03/24/USAT/866ee04e-9c56-4f84-ada3-e0c0ea0c0fb3-XXX_FUN_SMARTPET_041814.JPG?crop=3734,2100,x0,y29&width=3200&height=1680&fit=bounds");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    width: 100%;
+    height: 350px;
+
+}
+
+.titulo-noticia h1{
+    font-family: 'Oswald', sans-serif;
+    color:white;
+}
+
+.titulo-noticia p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.texto-cabecalho{
+    color: white;
+    margin: auto;
+}
+
+.img-post{
+    height: 250px;
+    width: auto;
+}
+
+.detalhes-post {
+    text-align: center;
+}
+
+figcaption{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+
+
+/*Cards de recomendações depois do post*/
+
+.post-conteudo p{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+.post-conteudo h3{
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+}
+.posts-relacionados{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}

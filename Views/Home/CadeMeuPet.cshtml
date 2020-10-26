@@ -1,0 +1,248 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Site CCZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <link rel="stylesheet" href="/../assets/css/adocao.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--INFORMAÇÃO -->
+    <section class="infocademeucao" style="background: #ece4b7;">
+        <div class="container-fluid">
+            <div class="container py-3 text-center">
+                <div class="row mb-5">
+                    <div class="col" style="border-radius:5px; padding: 25px;">
+                        <h1 style="text-align:left;">Cadê meu pet?</h1>
+                        <br>
+                        <p style="text-align: justify">Perdeu seu animal e não faz ideia de onde ele pode estar? Não
+                            se desespere, nós podemos ajudar! O Site CZZ tem uma área reservada só para quem quiser
+                            anunciar, gratuitamente, o animalzinho perdido. O objetivo é formar uma ampla rede de
+                            solidariedade entre donos e amantes de pets, para que, com a ajuda de outros usuários do
+                            site, o dono possa devolver seu cachorro perdido ao lar novamente.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="CADEMEUPET-ANUNCIE.html" class="btn btn-dark">Anunciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--ANIMAIS PERDIDOS-->
+    <section class="adocao">
+        <div class="container-fluid">
+            <div class="container my-3 py-3 text-center">
+                <div class="row mb-5">
+                    <div class="col">
+                        <h1 style="text-align: left; margin-left: 10px;">Animais Perdidos</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Florzinha</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="CadeMeuPet-Florzinha.html" class="btn btn-light" style="background:#fc9f5b">Ver
+                            Anúncio</a>
+
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Amora</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Paçoca</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <hr>
+    <!--ANIMAIS ENCONTRADOS-->
+    <section class="adocao">
+        <div class="container-fluid">
+            <div class="container my-3 py-3 text-center">
+                <div class="row mb-5">
+                    <div class="col">
+                        <h1 style="text-align: left; margin-left: 10px;">Animais Encontrados</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Florzinha</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
+
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Amora</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Paçoca</h5>
+                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
+                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
+                            elementum urna auctor et.</p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <br>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about wow fadeInUp">
+                        <img src="/../assets/img/logo.png" style="width: 150px">
+                        <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                                <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                                <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                                <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                                <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                                <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+      </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+
+</html>

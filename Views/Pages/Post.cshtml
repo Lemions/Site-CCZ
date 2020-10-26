@@ -1,0 +1,191 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bem vindo ao CCZ Barra Bonita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <link rel="stylesheet" href="/../assets/css/post_blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>  
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class="jumbotron titulo-noticia">
+            <div class="row">
+                <div class="col-lg-8 texto-cabecalho">
+                    <h1>Exemplo de notícia/post no Blog!</h1><br>
+                    <p class="olho-noticia">Uau olha que noticia daora lore ipso etfcis porta quam ornare felis porta, at egestas leo sollicitudin. Duis mattis lobortis venenatis. Integer non leo vitae massa aliquet commodo mollis ut elit. Morbi pellentesque e</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 col-sm-12 post-infos">
+                <div class="detalhes-post">
+                    <p class="far">
+                       <i class="fa fa-user" aria-hidden="true"></i>
+                       Autor: Cachorrinho Misterioso &nbsp; 
+                       <i class="fa fa-clock-o" aria-hidden="true"></i> 
+                       19 de maio de 2020 &nbsp;
+                       <a href="#categoria" alt="Clique para ver mais posts nesta categoria">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Categoria
+                    </a>
+                </p>
+            </div><br>
+            <div class="post-conteudo">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan, mauris vel cursus vulputate, massa nibh elementum lorem, vitae sollicitudin mi metus a odio. Ut commodo pulvinar ornare. Morbi faucibus massa eu nibh semper, ac tempor urna aliquam. Morbi feugiat arcu a orci tincidunt volutpat. Aliquam et elementum nibh. Proin tempor malesuada ullamcorper. Suspendisse id bibendum magna. Nunc venenatis lectus elit, eu convallis metus faucibus in. Nullam porta, mi elementum condimentum fermentum, dolor purus sollicitudin leo, sit amet semper ante enim eget tortor. Nullam eget pharetra ligula, ut faucibus velit. Vestibulum leo nulla, pellentesque non feugiat in, pulvinar varius nisi. Curabitur at interdum purus, dapibus tristique lorem. Vestibulum ac arcu quis sapien laoreet placerat a suscipit metus. Nulla facilisi. Vestibulum eu maximus lacus, aliquam faucibus mauris. </p>
+                <h3>Subtitulo uau</h3>
+                <p> Morbi massa leo, commodo a placerat id, sollicitudin a quam. Fusce fermentum lacus at nunc tempus, sit amet sagittis ante ornare. Praesent suscipit sem quis sodales egestas. Sed sapien orci, dignissim in quam vitae, aliquet faucibus mi. Suspendisse pharetra iaculis ipsum in iaculis. Cras quis arcu luctus, consequat lacus et, semper metus. Etiam vel ligula ac nisi porta dapibus at vitae urna. Nunc at suscipit ex, et laoreet nisl. Donec aliquam porta risus vitae sollicitudin. Suspendisse ornare purus sed nibh semper, eget hendrerit justo aliquet. Duis eget dolor et libero imperdiet malesuada. Duis id efficitur orci. In vestibulum nunc ut diam eleifend, a bibendum nulla fringilla. Curabitur id ante tristique ligula euismod gravida. </p>
+                <figure>
+                    <img class="img-post" alt="foto de cachorrinho segurando uma meia com a boca" src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2015/06/diy-dog-toy-ideas-253x190.jpg"><figcaption><i>Cachorrinhos brincam com coisas isso é legal né galerinha.</i></figcaption>
+                </figure>
+                <p> Morbi euismod ante vitae urna euismod, in maximus ex malesuada. In eu nunc eget odio fringilla molestie. Phasellus sodales congue dapibus. Aliquam porta at dui et scelerisque. Mauris quis maximus augue. Proin et ullamcorper massa. Morbi non aliquet risus. Morbi feugiat purus mi, sed dapibus arcu elementum id. Vivamus sodales turpis quis nisl tempus, a fringilla risus ullamcorper. Cras a orci ac risus porttitor congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sed dolor quis sapien scelerisque cursus. Donec malesuada, ipsum vitae facilisis lacinia, nibh est aliquet velit, commodo venenatis felis mauris eu leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu feugiat magna, eu iaculis sapien. </p>
+            </div>
+        </div>
+    </div>
+</div><br/>
+
+<!--Área dos Cards (posts)-->
+<div class="container-fluid">
+    <div class="posts-relacionados">Confira essas outras matérias!</div><br/>
+    <div class="row justify-content-center">
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="/../assets/img/correndo.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="/../assets/img/4.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<br/>
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-about wow fadeInUp">
+                    <img src="/../assets/img/logo.png" style="width: 150px">
+                    <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                </div>
+                <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                    <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                    </p>
+                </div>
+                <div class="col-md-4 footer-links wow fadeInUp">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Links</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                            <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                            <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                            <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                            <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                            <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/2068f82851.js"></script>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+</html>

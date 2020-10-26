@@ -1,0 +1,243 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Site CCZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <link rel="stylesheet" href="/../assets/css/adocao.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="hero" style="background-image: url(/../assets/img/adocao.jpg);">
+        <div class="hero-inner"></div>
+    </section>
+
+    <!--Incentivando adoção-->
+    <section class="adocao-incentivo">
+        <div class="container-fluid">
+            <div class="container py-3 text-center">
+                <div class="row mb-5">
+                    <div class="col">
+                       <h1 class="titulo-adocao">Adotar é um ator de amor</h1>
+                       <br>
+                        <p>Adotar um animal é valorizar a vida. Um cão ou gato é capaz de
+                            sentir
+                            emoções e por isso, sofre tanto quanto nós, humanos. É recuperar uma vida literalmente
+                            jogada
+                            fora. Ao adotar um animal carente, você ensina ao seu filho, às crianças com quem você
+                            convive,
+                            verdadeiros valores de responsabilidade, comprometimento e, sobretudo, humanidade.
+                        </p>
+                        <p>
+                            Ao adotar, você ajuda a reduzir o número de cães e gatos abandonados. Geralmente os animais
+                            de
+                            rua ou de abrigos já passaram por muito sofrimento e tudo o que eles precisam é de um bom
+                            lar
+                            para serem felizes de verdade.
+                            E não há recompensa maior do que vê-los se transformarem naquela coisinha alegre e saudável
+                            depois de receberem uma boa dose de cuidados e carinho.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Área de Adoção-->
+    <section class="adocao">
+        <div class="container-fluid">
+            <div class="container my-3 py-3 text-center">
+                <div class="row mb-5">
+                    <div class="col">
+                        <h1>Adote</h1>
+                        <br>
+                        <h6><b>Agradecemos seu interesse em adotar um cão ou um gato. Prepare-se para uma experiência gratificante que durará muitos anos.</b></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Florzinha</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 15px; height: 15px;">
+                        </p>
+                        <a href="Adocao-Florzinha.html" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                        
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Amora</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 20px; height: 20px;">
+                        </p>
+                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Paçoca</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
+                        </p>
+                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Thor</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
+                        </p>
+                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
+                        </p>
+                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                    </div>
+                </div>
+
+                <div class="card shadow" style="width: 20rem;">
+                    <div class="inner">
+                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Meg</h5>
+                        <p class="card-text">
+                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 20px; height: 20px;">
+                        </p>
+                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about wow fadeInUp">
+                        <img src="/../assets/img/logo.png" style="width: 150px">
+                        <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                                <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                                <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                                <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                                <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                                <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+      </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+
+</html>

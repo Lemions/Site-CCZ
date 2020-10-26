@@ -1,0 +1,13 @@
+/*Denuncias*/
+#denuncias .denuncia-titulo {
+    text-align: left;
+}
+
+#denuncias .denuncia-conteudo {
+    text-align: left;
+    margin-top: 60px;
+}
+
+.denuncia-formulario {
+	width: 100vw;
+}

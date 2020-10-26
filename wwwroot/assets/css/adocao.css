@@ -1,0 +1,51 @@
+/*------------------------Adocao-----------------------------*/
+.nome-animal {
+    align-items: left;
+    font-family: 'Oswald', sans-serif;
+    margin: 16px;
+}
+
+.adocao-incentivo {
+    background: #ece4b7;
+    margin-top: 0rem;
+    padding-top: 50px;
+    border-radius:5px; 
+    padding: 25px;
+}
+
+.adocao-incentivo h1 {
+    text-align: center;
+}
+
+.titulo-adocao {
+    margin-top: 50px;
+
+}
+/*IMAGEM DO ANIMAL PARA ADOÇÃO*/
+.img {
+  width: 200px;
+  height: 350px;   
+}
+
+/*DADOS GERAIS E SAÚDE*/
+.adocao-detalhes {
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+/*HISTÓRIA E DESCRIÇÃO*/
+.historia {
+    padding-top: 25px;
+}
+.adocao {
+    padding-top: 25px;
+    padding-bottom: 25px;    
+}
+
+/*BOTÃO DOS CARDS*/
+.bnt-dark {
+    background-color: #fc9f5b;
+}
+.infocademeucao {
+    margin-top: 50px;
+}

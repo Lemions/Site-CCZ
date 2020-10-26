@@ -1,0 +1,326 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bem vindo ao CCZ Barra Bonita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/carousel.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="assets/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Start Image Slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url(assets/img/auau.jpeg);">
+                <div class="carousel-caption d-md-block">
+                    <h5 class="animated bounceInRight" style="animation-delay: 1s">Bem-Vindo ao site do CCZ Barra Bonita</h5>
+                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">Conheça o nosso blog!</p>
+                    <p class="animated bounceInRight" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                </div>
+            </div>
+            <!-- Slide 2-->
+            <div class="carousel-item" style="background-image: url(assets/img/dormingo.jpeg);">
+                <div class="carousel-caption d-md-block">
+                    <h5 class="animated slideInDown" style="animation-delay: 1s">Racismo no mundo pet?</h5>
+                    <p class="animated fadeInUp" style="animation-delay: 1.5s">Saiba quais animais sempre sobram nas feiras de adoção e o porquê.</p>
+                    <p class="animated zoomIn" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                </div>
+            </div>
+            <!-- Slide 3-->
+            <div class="carousel-item" style="background-image: url(assets/img/correndo.jpg);">
+                <div class="carousel-caption d-md-block">
+                    <h5 class="animated zoomIn" style="animation-delay: 1s">Campanha de vacinação em Barra Bonita</h5>
+                    <p class="animated fadeInLeft" style="animation-delay: 1.5s">Por que devo vacinar meu pet?</p>
+                    <p class="animated zoomIn" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                </div>
+            </div>
+        </div> <!--End Carousel Inner -->
+
+        <!-- Prev and Next Buttons-->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+
+    </div>
+
+    <!--Área dos Cards (posts)-->
+    <section id="posts">
+        <div class="container my-3 py-3 text-center">
+          <div class="row mb-5">
+            <div class="col">
+                <h1>Últimas publicações</h1>
+                <p class="mt-3">As notícias e artigos mais recentes diretamente para você!</p>
+                <small>Acesse o <a href="Blog.html">Blog do CCZ</a> para ver mais posts.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Área dos Cards (posts)-->
+    <section id="posts">
+        <div class="container my-3 py-3 text-center">
+          <div class="row mb-5">
+            <div class="col">
+                <h1>Animais perdidos</h1>
+                <p class="mt-3">Por favor, entre em contato caso encontre algum dos animais abaixo.</p>
+                <small>Acesse o <a href="Blog.html">Cadê meu cão</a> para ver todos os animais registrados.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Área dos Cards (posts)-->
+    <section id="posts">
+        <div class="container my-3 py-3 text-center">
+          <div class="row mb-5">
+            <div class="col">
+                <h1>Animais para adoção</h1>
+                <p class="mt-3">Seu novo melhor amigo está te esperando!</p>
+                <small>Acesse a página de <a href="adocao.html">Adoção</a> para ver mais animais.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+
+        <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Design</h5>
+                <p class="card-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <a href="#" class="btn btn-primary">Ver post</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<br/>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about wow fadeInUp">
+                        <img src="assets/img/logo.png" style="width: 150px">
+                        <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                                <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                                <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                                <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                                <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                                <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+      </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

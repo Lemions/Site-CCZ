@@ -1,0 +1,201 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quem somos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+	<link rel="stylesheet" href="/../assets/css/main.css" />
+	<link rel="stylesheet" href="/../assets/css/estilo_quemsomos.css" />
+		<link rel="stylesheet" href="/../assets/css/carousel.css" />
+	<link rel="stylesheet" href="/../assets/css/js/script.js" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+<body>  
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+ 		<a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
+ 		<button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+ 			<span class="navbar-toggler-icon"></span>
+ 		</button>
+
+ 		<div class="collapse navbar-collapse" id="navbarResponsive"> 
+ 			<ul class="navbar-nav ml-auto">
+ 				<li class="nav-item">
+                    <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                </li>
+ 			</ul>
+ 		</div>
+ 	</nav>
+
+	<div class="carousel-inner">
+		<div class="carousel-item active" style="background-image: url(/../assets/img/nome.jpg); filter: brightness(58%)">
+		</div>
+		<div class="carousel-caption d-md-block">
+			<h5 class="animated bounceInLeft" style="animation-delay: 0.5s">CONHEÇA A NOSSA EQUIPE</h5>
+			<p class="animated bounceInLeft" style="animation-delay: 1s">Conheça toda a equipe que trabalha para o bem da população da cidade e dos animaiszinhos!</p>
+		</div>   
+	</div>
+
+	<section id="posts">
+		<div class="container my-3 py-3 text-center">
+			<div class="row mb-5">
+				<div class="col">
+					<h1>Quem somos?</h1>
+					<p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container page-top">
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz1.jpg" rel="ligthbox">
+					<img  src="/../assets/img/ccz1.jpg" class="zoom img-fluid "  alt="">
+
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz2.jpg"  class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz2.jpg" class="zoom img-fluid"  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz3.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz3.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz4.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz4.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz5.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz5.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz6.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz6.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz1.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz1.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				<a href="/../assets/img/ccz4.jpg" class="fancybox" rel="ligthbox">
+					<img  src="/../assets/img/ccz4.jpg" class="zoom img-fluid "  alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="textoicone">
+		<div id="quemsomostit" class="col-md-12">
+			<h1>Conheça nossa Equipe...</h1>
+		</div>
+		<hr>
+		<div class="col-md-4" >
+			<img class="rounded-circle" src="/../assets/img/gatinhoo.jpg" width="140" height="140">
+			<h3>Membro 1</h3>
+			<p>*Sua função</p>
+		</div>
+		<div class="col-md-4">
+			<img class="rounded-circle" src="/../assets/img/gatinhoo.jpg" width="140" height="140">
+			<h3>Membro 2</h3>
+			<p>*Sua função</p>
+		</div>
+		<div class="col-md-4">
+			<img class="rounded-circle" src="/../assets/img/gatinhoo.jpg" width="140" height="140">
+			<h3>Membro 3</h3>
+			<p>*Sua função</p>
+		</div>
+	</div>
+
+                <!-- Footer -->
+                <br/>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about wow fadeInUp">
+                        <img src="/../assets/img/logo.png" style="width: 150px">
+                        <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                                <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                                <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                                <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                                <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                                <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+      </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+</html>

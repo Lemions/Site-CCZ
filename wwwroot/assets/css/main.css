@@ -1,0 +1,156 @@
+body {
+	overflow-x: hidden;
+	color: #2e2e2e; 
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+	text-align: left;
+}
+
+
+
+a {
+    color: #e38b4b;
+}
+
+
+h1 {
+	font-size: 36px;
+	color: #555;
+	font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+h5 {
+	font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+	font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn-primary {
+    background-color: #fc9f5b;
+    border: #fc9f5b;
+}
+.btn-primary:hover {
+    filter: brightness(1.2);
+    background-color: #fc9f5b;
+    border: #fc9f5b;
+}
+
+
+
+/*======== Navbar ========*/
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	background: rgb(51,202,127);
+    background: linear-gradient(201deg, rgba(51,202,127,1) 31%, rgba(125,207,182,1) 99%); 
+    -webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+	box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+}
+
+.navbar-brand img {
+	height: 2rem;
+}
+
+.navbar-nav li{
+	padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+	padding-top: .8rem;
+	transition: 0.3s
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #ece4b7;
+}
+
+/*Rodapé*/
+
+.footer-top {
+    padding-top: 27px;
+    background: #ece4b7;
+    text-align: center;
+}
+.footer-top h3{
+    font-family: 'Oswald', sans-serif;
+}
+.footer-top p,a{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*---cards---*/
+#posts{
+	margin-top: 5%;
+}
+
+#posts img{
+	margin-top: -50px;
+}
+
+#posts i{
+	font-size: 26px;
+	color: #555;
+}
+
+#posts p{
+	font-weight: 500;
+}
+
+#posts .card{
+	border-radius: 0;
+	box-shadow: 5px 5px 15px #e74c3c;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+}
+
+#posts .card:hover{
+	background: #e74c3c;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 5px 5px 10px #9E9E9E; 
+}
+
+#posts .card:hover h3, #posts .card:hover i{
+	color: #fff;
+}
+
+.card {
+	margin: 5px;
+}
+
+.container{
+    margin-top: 0;
+}
+
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+}
