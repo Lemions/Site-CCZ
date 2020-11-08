@@ -9124,11 +9124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\itsth\\Desktop\\Testes TCC\\ProjetoCCZ\\SiteCCZ.csproj",
+      "projectUniqueName": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
       "projectName": "SiteCCZ",
-      "projectPath": "C:\\Users\\itsth\\Desktop\\Testes TCC\\ProjetoCCZ\\SiteCCZ.csproj",
+      "projectPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
       "packagesPath": "C:\\Users\\itsth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\itsth\\Desktop\\Testes TCC\\ProjetoCCZ\\obj\\",
+      "outputPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\itsth\\AppData\\Roaming\\NuGet\\NuGet.Config"

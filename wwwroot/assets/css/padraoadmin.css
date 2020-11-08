@@ -1,0 +1,124 @@
+body {
+  background: #f5fffa;
+  font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+  color: #40453E;
+}
+
+h4 {
+  color: #838C7E;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+  }
+  
+  /* Provide sufficient contrast against white background */
+  a {
+    color:#e38b4b;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: rgb(250, 194, 133);
+    border-color: rgb(250, 194, 133);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color .2s;
+    justify-content: center;
+  }
+  
+  .btn-primary:hover {
+    background: rgb(249, 189, 115);
+    border-color: rgb(249, 189, 115);
+  }
+  
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: rgb(250, 194, 133);
+    border-color: rgb(250, 194, 133);
+  }
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .border-top {
+    border-top: 1px solid #e5e5e5;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+  
+  button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+  }
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+  }
+
+/*======== Navbar ========*/
+
+.navbar {
+	text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	background: rgb(51,202,127);
+    background: linear-gradient(201deg, rgba(51,202,127,1) 31%, rgba(125,207,182,1) 99%); 
+    -webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+}
+
+.navbar-brand img {
+	height: 2rem;
+}
+
+.navbar-nav li{
+	padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+	padding-top: .8rem;
+	transition: 0.3s
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #ece4b7;
+}

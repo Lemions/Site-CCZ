@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HFNWcGTvy16X2laQN+HhMHsnXc3n1V3WNB2N/l0nj5pLSzHTOY+BpzQIi7CkCokOmkzFjbBtJN1b0XmK0N8DiQ==",
+  "dgSpecHash": "6egXfZsRoGsJzj7S7zXCJ/nKJ+/Jb/IbGz6hqqL3a+MSYSnrPmnbF8Uxvm313RxSVJRh0WfahlERbw9uzLZmWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\itsth\\Desktop\\Testes TCC\\ProjetoCCZ\\SiteCCZ.csproj",
+  "projectFilePath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\itsth\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\itsth\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

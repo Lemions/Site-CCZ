@@ -14447,6 +14447,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Index.cshtml",
+      "TargetPath": "Views\\Adocao\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14502,6 +14507,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Create.cshtml",
+      "TargetPath": "Views\\Adocao\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Details.cshtml",
       "TargetPath": "Views\\Postsblog\\Details.cshtml",
       "FileKind": "mvc"
@@ -14537,6 +14547,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Edit.cshtml",
+      "TargetPath": "Views\\Adocao\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Details.cshtml",
+      "TargetPath": "Views\\Adocao\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Adocao.cshtml",
       "TargetPath": "Views\\Home\\Adocao.cshtml",
       "FileKind": "mvc"
@@ -14544,6 +14564,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Delete.cshtml",
+      "TargetPath": "Views\\Adocao\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
