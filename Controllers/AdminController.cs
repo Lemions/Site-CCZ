@@ -35,14 +35,6 @@ namespace SiteCCZ.Controllers
             return View();
         }
 
-        public IActionResult Painel_adm()
-        {
-            var identity = (ClaimsIdentity)User.Identity;
-            IEnumerable<Claim> claims = identity.Claims;
-            ViewData["Nome"] = claims.ToArray()[1].Value;
-            return View();
-        }
-
         [AllowAnonymous]
         public async Task<IActionResult> Login()
         {
@@ -70,7 +62,7 @@ namespace SiteCCZ.Controllers
                     new ClaimsPrincipal(claimsIdentity),
                     authProperties);
 
-                return RedirectToAction("Painel_adm");
+                return RedirectToAction("Index");
             }
             else
             {

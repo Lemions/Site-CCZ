@@ -1,0 +1,50 @@
+@model SiteCCZ.Models.Postsblog
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar post</h1>
+
+<h4>Postsblog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DataPublicacao" class="control-label"></label>
+                <input asp-for="DataPublicacao" class="form-control" />
+                <span asp-validation-for="DataPublicacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Autor" class="control-label"></label>
+                <input asp-for="Autor" class="form-control" />
+                <span asp-validation-for="Autor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conteudo" class="control-label"></label>
+                <input asp-for="Conteudo" class="form-control" />
+                <span asp-validation-for="Conteudo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem" class="control-label"></label>
+                <input asp-for="Imagem" class="form-control" />
+                <span asp-validation-for="Imagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescricaoImagem" class="control-label"></label>
+                <input asp-for="DescricaoImagem" class="form-control" />
+                <span asp-validation-for="DescricaoImagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista de posts</a>
+</div>
+

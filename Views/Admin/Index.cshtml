@@ -1,9 +1,59 @@
-﻿@{
+@{
+    Layout = null;
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem Vindo, @ViewData["Nome"]</h1>
-</div>
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin | CCZ</title>
 
+        <link rel="icon" href="/../assets/img/logo-png.png">
 
+        <link rel="stylesheet" href="/../assets/css/painel-adm.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="page-landing">
+            <div id="container">
+
+                <header>
+                    <img class="logo" id="logo" src="/../assets/img/logo-png.png" alt="Logo CCZ">
+                    <div class="text-center">
+                        <h1 class="display-4">Bem Vindo, @ViewData["Nome"]</h1>
+                    </div>
+                </header>
+        
+                <main>        
+                    <a class="primary-button" role="button" asp-action="Create" asp-controller="Animaisccz">
+                        Cadastrar animal
+                    </a>
+
+                    <a class="primary-button" role="button" asp-action="Index" asp-controller="Animaisccz">
+                        Lista de animais
+                    </a>
+
+                    <a class="primary-button" role="button" asp-action="Create" asp-controller="Vacinas">
+                        Cadastrar vacinas
+                    </a>
+
+                    <a class="primary-button" role="button" asp-action="Create" asp-controller="Vermifugos">
+                        Cadastrar vermifugos
+                    </a>
+
+                    <a class="primary-button" role="button" asp-action="Create" asp-controller="Postsblog">
+                        Criar post
+                    </a>
+
+                    <a class="primary-button" role="button" asp-action="index" asp-controller="Postsblog">
+                        Lista de posts
+                    </a>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
