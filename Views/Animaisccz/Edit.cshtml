@@ -11,40 +11,11 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdAnimal" />
-            <div class="form-group">
-                <label asp-for="Especie" class="control-label"></label>
-                <input asp-for="Especie" class="form-control" />
-                <span asp-validation-for="Especie" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Sexo" class="control-label"></label>
-                <input asp-for="Sexo" class="form-control" />
-                <span asp-validation-for="Sexo" class="text-danger"></span>
-            </div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
+                <input asp-for="Nome" class="form-control" required/>
                 <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Foto" class="control-label">Imagem do animal</label>
-                <input asp-for="Foto" type="file" name="pic" class="file-chooser form-control" value="@ViewData["filelocation"]" accept="image/*" required />
-                <span asp-validation-for="Foto" class="text-danger"></span>
-            </div> 
-
-            <img class="preview-img" src="@ViewData["filelocation"]?ver=1.3" />
-            
-            <div class="form-group">
-                <label asp-for="IdadeAprox" class="control-label"></label>
-                <input asp-for="IdadeAprox" class="form-control" />
-                <span asp-validation-for="IdadeAprox" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Porte" class="control-label"></label>
-                <input asp-for="Porte" class="form-control" />
-                <span asp-validation-for="Porte" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Cor" class="control-label"></label>
@@ -52,24 +23,86 @@
                 <span asp-validation-for="Cor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Raca" class="control-label"></label>
+                <label asp-for="Raca" class="control-label">Raça</label>
                 <input asp-for="Raca" class="form-control" />
                 <span asp-validation-for="Raca" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Historia" class="control-label"></label>
-                <input asp-for="Historia" class="form-control" />
-                <span asp-validation-for="Historia" class="text-danger"></span>
+                <label asp-for="IdadeAprox" class="control-label">Idade aproximada</label>
+                <input asp-for="IdadeAprox" class="form-control" type="number"/>
+                <span asp-validation-for="IdadeAprox" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StatusAnimal" class="control-label"></label>
-                <input asp-for="StatusAnimal" class="form-control" />
+                <label asp-for="Especie" class="control-label">Espécie</label>
+                <div class="radio-container">
+                    <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Cachorro" id="Cachorro"/>
+                    <label for="Cachorro">Cachorro</label>
+                    <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Gato" id="Gato"/>
+                    <label for="Gato">Gato</label>
+                    <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Outro" id="Outro"/>
+                    <label for="Outro">Outro</label>
+                </div>
+                <span asp-validation-for="Especie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label"></label>
+                <div class="radio-container">
+                    <input asp-for="Sexo" class="form-control" type="radio" name="Sexo" value="Femea" id="Femea"/>
+                    <label for="Femea">Fêmea</label>
+                    <input asp-for="Sexo" class="form-control" type="radio" name="Sexo" value="Macho" id="Macho"/>
+                    <label for="Macho">Macho</label>
+                </div>
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+            
+
+            
+            <div class="form-group">
+                <label asp-for="Porte" class="control-label"></label>
+                <div class="radio-container">
+                    <input asp-for="Porte" class="form-control" type="radio" name="Porte" value="Pequeno" id="Pequeno"/>
+                    <label for="Pequeno">Pequeno</label>
+                    <input asp-for="Porte" class="form-control" type="radio" name="Porte" value="Medio" id="Medio"/>
+                    <label for="Medio">Médio</label>
+                    <input asp-for="Porte" class="form-control" type="radio" name="Porte" value="Grande" id="Grande"/>
+                    <label for="Grande">Grande</label>
+                </div>
+                <span asp-validation-for="Porte" class="text-danger"></span>
+            </div>
+            
+            
+            
+            <div class="form-group">
+                <label asp-for="StatusAnimal" class="control-label">Está abrigado aqui no Centro?</label>
+                <div class="radio-container">
+                    <input asp-for="StatusAnimal" class="form-control" type="radio" name="StatusAnimal" value="Sim" id="Sim-Status"/>
+                    <label for="Sim-Status">Sim</label>
+                    <input asp-for="StatusAnimal" class="form-control" type="radio" name="StatusAnimal" value="Nao" id="Nao-Status"/>
+                    <label for="Nao-Status">Não</label>
+                </div>
                 <span asp-validation-for="StatusAnimal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Adotavel" class="control-label"></label>
-                <input asp-for="Adotavel" class="form-control" />
+                <label asp-for="Adotavel" class="control-label">Está disponível para adoção?</label>
+                <div class="radio-container">
+                    <input asp-for="Adotavel" class="form-control" type="radio" name="Adotavel" value="Sim" id="Sim"/>
+                    <label for="Sim">Sim</label>
+                    <input asp-for="Adotavel" class="form-control" type="radio" name="Adotavel" value="Nao" id="Nao"/>
+                    <label for="Nao">Não</label>
+                </div>
                 <span asp-validation-for="Adotavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Foto" class="control-label"></label> <br />
+                <input asp-for="Foto" type="file" name="pic" class="file-chooser" accept="image/*" required />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>
+            <img class="preview-img">
+
+            <div class="form-group">
+                <label asp-for="Historia" class="control-label">História</label>
+                <textarea asp-for="Historia" class="form-control" placeholder="Conte um pouco sobre a história do animal"></textarea>
+                <span asp-validation-for="Historia" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-primary" />

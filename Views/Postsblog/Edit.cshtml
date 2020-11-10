@@ -12,30 +12,29 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdPostBlog" />
             <div class="form-group">
-                <label asp-for="DataPublicacao" class="control-label"></label>
-                <input asp-for="DataPublicacao" class="form-control" />
+                <label asp-for="DataPublicacao" class="control-label">Data de publicação</label>
+                <input asp-for="DataPublicacao" class="form-control" type="date" required/>
                 <span asp-validation-for="DataPublicacao" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Autor" class="control-label"></label>
-                <input asp-for="Autor" class="form-control" />
+                <input asp-for="Autor" class="form-control" required/>
                 <span asp-validation-for="Autor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Conteudo" class="control-label"></label>
-                <input asp-for="Conteudo" class="form-control" />
+                <label asp-for="Conteudo" class="control-label">Conteúdo do post</label>
+                <input asp-for="Conteudo" class="form-control" required/>
                 <span asp-validation-for="Conteudo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Imagem" class="control-label"></label>
-                <input asp-for="Imagem" class="form-control" />
+                <input asp-for="Imagem" class="form-control" required/>
                 <span asp-validation-for="Imagem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DescricaoImagem" class="control-label"></label>
-                <input asp-for="DescricaoImagem" class="form-control" />
+                <label asp-for="DescricaoImagem" class="control-label">Descrição da imagem (Acessibilidade)</label>
+                <input asp-for="DescricaoImagem" class="form-control" required/>
                 <span asp-validation-for="DescricaoImagem" class="text-danger"></span>
             </div>
             <div class="form-group">

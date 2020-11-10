@@ -9119,19 +9119,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\itsth\\.nuget\\packages\\": {}
+    "/home/lemions/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
+      "projectUniqueName": "/home/lemions/Área de Trabalho/SiteCCZ/Site-CCZ/SiteCCZ.csproj",
       "projectName": "SiteCCZ",
-      "projectPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
-      "packagesPath": "C:\\Users\\itsth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\obj\\",
+      "projectPath": "/home/lemions/Área de Trabalho/SiteCCZ/Site-CCZ/SiteCCZ.csproj",
+      "packagesPath": "/home/lemions/.nuget/packages/",
+      "outputPath": "/home/lemions/Área de Trabalho/SiteCCZ/Site-CCZ/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\itsth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/lemions/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9200,7 +9200,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
   }

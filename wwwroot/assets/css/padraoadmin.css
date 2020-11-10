@@ -122,3 +122,23 @@ a.navbar-brand {
 .navbar-dark .navbar-nav .nav-link:hover {
 	color: #ece4b7;
 }
+
+/*Formularios - adm*/
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container label {
+	display: inline-block;
+	padding: 6px 17px;
+	background-color: #f0f0f0;;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: 0.1s;
+}
+
+.radio-container input[type="radio"]:checked+label {
+	background-color:#ffc995;
+	border-radius: 2px;
+
+}
