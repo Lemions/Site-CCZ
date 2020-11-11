@@ -142,3 +142,7 @@ a.navbar-brand {
 	border-radius: 2px;
 
 }
+
+.preview-img {
+  max-height: 14rem;
+}
