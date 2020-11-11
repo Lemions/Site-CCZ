@@ -1,3 +1,4 @@
+@model Siteccz.Models.AdocaoViewModel
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -5,6 +6,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +20,15 @@
     <link rel="stylesheet" href="/../assets/css/adocao.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+        <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
@@ -51,24 +54,25 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col">
-                    <h1 style="color: black; margin-top:60px">Florzinha</h1>
+                    <h1 style="color: black; margin-top:60px">@Html.DisplayFor(model => model.Nome)</h1>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col">
-                    <img style="width: 400px;" src="/../assets/img/exemplocard.jpg">
+                    <img style="width: 400px;" src="@ViewData["filelocation"]?ver=1.3" />
                 </div>
                 <div class="col">
                     <dl>
                         <dt style="text-align: left; color: black;">DADOS GERAIS</dt>
-                        <dd style="text-align: left; color: black;">Cachorro</dd>
-                        <dd style="text-align: left; color: black;">Sexo: Femêa</dd>
-                        <dd style="text-align: left; color: black;">Porte: Médio</dd>
+                        <dd style="text-align: left; color: black;">@Html.DisplayFor(model => model.Especie)</dd>
+                        <dd style="text-align: left; color: black;">Sexo: @Html.DisplayFor(model => model.Sexo)</dd>
+                        <dd style="text-align: left; color: black;">Porte: @Html.DisplayFor(model => model.Porte)</dd>
 
                         <hr>
 
-                        <dt style="text-align: left; color:black;">SAÚDE</dt>
-                        <dd style="text-align: left; color: black;">Castrado</dd>
+                        <dt style="text-align: left; color:black;">Estado Clínico</dt>
+                        <dd style="text-align: left; color: black;">Castrado: @Html.DisplayFor(model =>
+                                                                                             model.StatusAnimal)</dd>
                         <dd style="text-align: left; color: black;">Vacinado</dd>
                     </dl>
                 </div>
@@ -76,7 +80,7 @@
         </div>
     </section>
 
-    <!-- HISTÓRIA E DESCRIÇÃO -->    
+    <!-- HISTÓRIA E DESCRIÇÃO -->
     <section class="historia">
         <div class="container">
 
@@ -85,66 +89,75 @@
                 <div class="col-lg-8">
                     <h3 style="color:black; text-align: left;">História
                     </h3>
-                    <p style="text-align: justify;">Sed vehicula in neque eget bibendum.
-                        Vestibulum non feugiat tellus. Pellentesque maximus lorem quis metus convallis pretium. Ut
-                        accumsan nibh elit, eget elementum urna auctor et. Morbi scelerisque consequat augue, vitae
-                        posuere eros vulputate nec. Pellentesque habitant morbi tristique senectus et netus et
-                        malesuada fames ac turpis egestas. Morbi vehicula, neque quis bibendum egestas, diam ante
-                        viverra tortor, id porttitor erat elit at nisl. Cras a purus sagittis, euismod neque at,
-                        tempor velit. Morbi elementum vestibulum lorem, at rhoncus ex laoreet eleifend. Duis dapibus
-                    sem finibus tellus sodales, vitae dignissim magna ultrices.</p>
+                    <p style="text-align: justify;">@Html.DisplayFor(model => model.Historia)</p>
                     <h3 style="color: black; text-align: left;">Deseja adotar?
                     </h3>
                     <p style="text-align: left;">Lembre-se:</p>
                     <ul>
                         <li style="text-align: left;">Animais têm sentimentos. Eles precisam de
                             carinho e
-                        atenção todos os dias.</li>
+                            atenção todos os dias.</li>
                         <li style="text-align: left;">Todos os moradores da casa devem estar de acordo
                             com
-                        a adoção.</li>
+                            a adoção.</li>
                         <li style="text-align: left;">Você terá despesas com ração, vacinas e
                             veterinário.
                         </li>
                         <li style="text-align: left;">Cães e gatos vivem 15 anos ou mais e você será
-                        responsável por cuidar dele durante todo esse tempo.</li>
+                            responsável por cuidar dele durante todo esse tempo.</li>
                     </ul>
                     <p style="text-align: left;"><b>Para entrar em contato conosco para realizar a
-                        adoção
-                    preencha o formulário abaixo.</b></p>
+                            adoção
+                            preencha o formulário abaixo.</b></p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</section>
+        </div>
+        </div>
+    </section>
 
-<!-- FORMULÁRIO -->
-<div class="row mb-5">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-8">
-        <form>
-            <div class="form-group">
-                <label for="text">Nome</label>
-                <input type="text" class="form-control" id="Nome" aria-describedby="nome">
-            </div>
-            <div class="form-group">
-                <label for="Email">Endereço de email</label>
-                <input type="email" class="form-control" id="Email" aria-describedby="email">
-            </div>
-            <div class="form-group">
-                <label for="text">Seu telefone</label>
-                <input type="text" class="form-control" id="telefone">
-            </div>
-            <div class="form-group">
-                <label for="Textarea">Por que deseja adotar este animal?</label>
-                <textarea class="form-control" id="Textarea" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-light" style="background:#fc9f5b;">Enviar</button>
-            </div>
-        </form>
-    </div></div>
+    <!-- FORMULÁRIO -->
+    <div class="row mb-5">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="IdContatoAdocao" class="control-label"></label>
+                    <input asp-for="IdContatoAdocao" class="form-control" type="hidden"/>
+                    <span asp-validation-for="IdContatoAdocao" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IdAnimal" class="control-label"></label>
+                    <input asp-for="IdAnimal" asp-route-id="@Model.IdAnimal" class="form-control" type="hidden"/>
+                    <span asp-validation-for="IdAnimal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label">Nome</label>
+                    <input asp-for="Nome" type="text" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Endereço de email</label>
+                    <input asp-for="Email" type="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefone" class="control-label">Seu telefone</label>
+                    <input asp-for="Telefone" type="text" class="form-control" />
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Justificativa" class="control-label">Por que deseja adotar este animal?</label>
+                    <textarea asp-for="Justificativa" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Justificativa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-top">
@@ -190,14 +203,15 @@
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-      </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 
 </body>
+
 </html>

@@ -11,19 +11,24 @@ namespace SiteCCZ.Controllers
 {
     public class PagesController : Controller
     {
+        private readonly Contexto _context;
         private readonly ILogger<PagesController> _logger;
 
-        public PagesController(ILogger<PagesController> logger)
+        public PagesController(ILogger<PagesController> logger, Contexto context)
         {
+            _context = context;
             _logger = logger;
         }
 
-        public IActionResult Adocao_Florzinha()
+        public IActionResult AdocaoDetalhes(int? id)
         {
-            return View();
+            var animal = _context.Animaisccz.Find(id);
+            var adocao = new AdocaoViewModel();
+            adocao.Animal = animal;
+            return View(adocao);
         }
 
-        public IActionResult CadeMeuPet_Florzinha()
+        public IActionResult CadeMeuPetDetalhes()
         {
             return View();
         }

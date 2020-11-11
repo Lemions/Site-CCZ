@@ -1,3 +1,4 @@
+@model Siteccz.Models.Animaisccz
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -99,88 +100,17 @@
                 </div>
             </div>
             <div class="row justify-content-center">
+                @foreach (var item in Model) {
                 <div class="card shadow" style="width: 20rem;">
                     <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Florzinha</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 15px; height: 15px;">
-                        </p>
-                        <a href="Adocao-Florzinha.html" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                        
+                        <h5 class="card-title">@Html.DisplayFor(model => model.Nome)</h5>
+                        <a asp-action="AdocaoDetalhes" asp-controller="Pages" asp-route-id="@Model.IdAnimal" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
                     </div>
                 </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Amora</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 20px; height: 20px;">
-                        </p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Paçoca</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
-                        </p>
-                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Thor</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
-                        </p>
-                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/masculino.png" alt="Macho" style="width: 20px; height: 20px;">
-                        </p>
-                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Meg</h5>
-                        <p class="card-text">
-                            <img class="genero" src="/../assets/img/femenino.png" alt="Macho" style="width: 20px; height: 20px;">
-                        </p>
-                        <a href="#"  class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>
