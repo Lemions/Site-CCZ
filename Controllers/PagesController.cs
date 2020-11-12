@@ -10,6 +10,7 @@ using SiteCCZ.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SiteCCZ.ViewModel;
 
+
 namespace SiteCCZ.Controllers
 {
     public class PagesController : Controller
@@ -23,6 +24,7 @@ namespace SiteCCZ.Controllers
             _logger = logger;
         }
 
+        //POST: Contatoadocao/Create
         public IActionResult AdocaoDetalhes(int? id)
         {
             var animal = _context.Animaisccz.Find(id);
@@ -34,7 +36,7 @@ namespace SiteCCZ.Controllers
         //POST: Contatoadocao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdContatoadocao,IdAnimal,Nome,Email,Telefone,Justificativa")] Contatosadocao contatosadocao)
+        public async Task<IActionResult> AdocaoDetalhes([Bind("IdContatoadocao,IdAnimal,Nome,Email,Telefone,Justificativa")] Contatosadocao contatosadocao)
         {
             if (ModelState.Isvalid)
             {
@@ -42,7 +44,8 @@ namespace SiteCCZ.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(contatosadocao);
+            ViewData["IdAnimal"] = new SelectList(_context.Animaisccz, "IdAnimal", "IdAnimal", contatosadocao.IdAnimal);
+            return View(AdocaoDetalhes);
         }
 
         public IActionResult CadeMeuPetDetalhes()
