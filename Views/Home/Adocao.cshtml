@@ -1,4 +1,4 @@
-@model Siteccz.Models.Animaisccz
+@model IEnumerable<SiteCCZ.Models.Animaisccz>
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -106,8 +106,8 @@
                         <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(model => model.Nome)</h5>
-                        <a asp-action="AdocaoDetalhes" asp-controller="Pages" asp-route-id="@Model.IdAnimal" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
+                        <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
+                        <a asp-action="AdocaoDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimal" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
                     </div>
                 </div>
                 }

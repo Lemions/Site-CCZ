@@ -971,8 +971,6 @@ C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\View
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Home\QuemSomos.cshtml.g.cs
-C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\Adocao_Florzinha.cshtml.g.cs
-C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadeMeuPet_Florzinha.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\Post.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\TesteNovoPost.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Postsblog\Create.cshtml.g.cs
@@ -1003,3 +1001,5 @@ C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\staticweba
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\staticwebassets\SiteCCZ.StaticWebAssets.xml
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.dll
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.pdb
+C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoDetalhes.cshtml.g.cs
+C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadeMeuPetDetalhes.cshtml.g.cs

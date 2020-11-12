@@ -5,7 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using SiteCCZ.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using SiteCCZ.ViewModel;
 
 namespace SiteCCZ.Controllers
 {
@@ -26,6 +29,20 @@ namespace SiteCCZ.Controllers
             var adocao = new AdocaoViewModel();
             adocao.Animal = animal;
             return View(adocao);
+        }
+
+        //POST: Contatoadocao/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("IdContatoadocao,IdAnimal,Nome,Email,Telefone,Justificativa")] Contatosadocao contatosadocao)
+        {
+            if (ModelState.Isvalid)
+            {
+                _context.Add(contatosadocao);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(contatosadocao);
         }
 
         public IActionResult CadeMeuPetDetalhes()

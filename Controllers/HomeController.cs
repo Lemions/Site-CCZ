@@ -5,16 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using SiteCCZ.Models;
 
 namespace SiteCCZ.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Contexto _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Contexto context)
         {
+            _context = context;
             _logger = logger;
         }
 
@@ -22,10 +25,9 @@ namespace SiteCCZ.Controllers
         {
             return View();
         }
-
-        public IActionResult Adocao()
+        public async Task<IActionResult> Adocao()
         {
-            return View();
+            return View(await _context.Animaisccz.ToListAsync());
         }
 
         public IActionResult Blog()
