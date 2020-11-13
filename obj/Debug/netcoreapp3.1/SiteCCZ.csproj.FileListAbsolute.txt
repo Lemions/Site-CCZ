@@ -1003,3 +1003,4 @@ C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.dl
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.pdb
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoDetalhes.cshtml.g.cs
 C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadeMeuPetDetalhes.cshtml.g.cs
+C:\Users\Notebook\Desktop\ProjetoCCZ\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoEmAnalise.cshtml.g.cs

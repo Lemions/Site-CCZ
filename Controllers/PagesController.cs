@@ -24,28 +24,46 @@ namespace SiteCCZ.Controllers
             _logger = logger;
         }
 
-        //POST: Contatoadocao/Create
+
         public IActionResult AdocaoDetalhes(int? id)
         {
             var animal = _context.Animaisccz.Find(id);
             var adocao = new AdocaoViewModel();
             adocao.Animal = animal;
+            adocao.IdAnimal = id ?? 0;
             return View(adocao);
         }
 
-        //POST: Contatoadocao/Create
+ 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AdocaoDetalhes([Bind("IdContatoadocao,IdAnimal,Nome,Email,Telefone,Justificativa")] Contatosadocao contatosadocao)
+        public async Task<IActionResult> AdocaoDetalhes(AdocaoViewModel model)
         {
-            if (ModelState.Isvalid)
+            if (ModelState.IsValid)
             {
-                _context.Add(contatosadocao);
+                var contato = new Contatosadocao()
+                {
+                    IdAnimal = model.IdAnimal,
+                    Nome = model.Nome,
+                    Email = model.Email,
+                    Telefone = model.Telefone,
+                    Justificativa = model.Justificativa
+                };
+                _context.Add(contato);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("AdocaoEmAnalise");
             }
-            ViewData["IdAnimal"] = new SelectList(_context.Animaisccz, "IdAnimal", "IdAnimal", contatosadocao.IdAnimal);
-            return View(AdocaoDetalhes);
+            var animal = _context.Animaisccz.Find(model.IdAnimal);
+            model.Animal = animal;
+            return View(model);
+        }
+
+ 
+
+        public IActionResult AdocaoEmAnalise(AdocaoViewModel model)
+        {
+            return View(model);
         }
 
         public IActionResult CadeMeuPetDetalhes()

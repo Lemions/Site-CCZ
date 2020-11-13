@@ -328,13 +328,18 @@ namespace SiteCCZ.Models
 
                 entity.Property(e => e.IdPostBlog).HasColumnType("int(11)");
 
+                entity.Property(e => e.OlhoPost)
+                    .HasColumnType("varchar(200)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.Autor)
                     .HasColumnType("varchar(80)")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Conteudo)
-                    .HasColumnType("varchar(2500)")
+                    .HasColumnType("varchar(5000)")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -347,6 +352,16 @@ namespace SiteCCZ.Models
 
                 entity.Property(e => e.Imagem)
                     .HasColumnType("varchar(250)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Titulo)
+                    .HasColumnType("varchar(100)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OlhoPost)
+                    .HasColumnType("varchar(200)")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
             });

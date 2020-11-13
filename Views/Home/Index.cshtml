@@ -1,3 +1,4 @@
+@model SiteCCZ.ViewModel.IndexViewModel
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -106,47 +107,19 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
+    @foreach (var item in Model)
+    {
         <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">
+                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Foto de ">
             </div>
             <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
+                <h5 class="card-title">@Html.DisplayFor(model => model.Animal.Nome)</h5>
+                <p class="card-text"@Html.DisplayFor(model => model.Animal.Historia)></p>
                 <a href="#" class="btn btn-primary">Ver post</a>
             </div>
         </div>
-
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
-        </div>
-
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
-        </div>
+    }
     </div>
 </div>
 

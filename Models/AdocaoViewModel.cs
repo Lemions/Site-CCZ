@@ -11,5 +11,7 @@ namespace SiteCCZ.ViewModel
         public string Email { get; set; }
         public string Telefone { get; set; }
         public string Justificativa { get; set; }
+        public virtual Animaisccz IdAnimalNavigation { get; set; }
+
     }
 }

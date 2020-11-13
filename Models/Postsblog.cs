@@ -11,5 +11,7 @@ namespace SiteCCZ.Models
         public string Conteudo { get; set; }
         public string Imagem { get; set; }
         public string DescricaoImagem { get; set; }
+        public string Titulo { get; set; }
+        public string OlhoPost { get; set; }
     }
 }
