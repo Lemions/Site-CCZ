@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SiteCCZ.Models;
+using SiteCCZ.ViewModel;
 
 namespace SiteCCZ.Controllers
 {

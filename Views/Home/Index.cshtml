@@ -57,27 +57,27 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url(assets/img/auau.jpeg);">
+            <div class="carousel-item active" style="background-image: url(@ViewData["filelocation"]?ver=1.3");">
                 <div class="carousel-caption d-md-block">
-                    <h5 class="animated bounceInRight" style="animation-delay: 1s">Bem-Vindo ao site do CCZ Barra Bonita</h5>
-                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">Conheça o nosso blog!</p>
-                    <p class="animated bounceInRight" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                    <h5 class="animated bounceInRight" style="animation-delay: 1s">@Html.DisplayFor(model => model.PostBlog.Titulo)</h5>
+                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">@Html.DisplayFor(model => model.PostBlog.OlhoPost)</p>
+                    <p class="animated bounceInRight" style="animation-delay: 2s"><a asp-action="PostBlog" asp-controller="Pages" asp-route-id="@item.IdPostBlog">Ver post</a></p>
                 </div>
             </div>
             <!-- Slide 2-->
-            <div class="carousel-item" style="background-image: url(assets/img/dormingo.jpeg);">
+            <div class="carousel-item" style="background-image: url(@ViewData["filelocation"]?ver=1.3");">
                 <div class="carousel-caption d-md-block">
-                    <h5 class="animated slideInDown" style="animation-delay: 1s">Racismo no mundo pet?</h5>
-                    <p class="animated fadeInUp" style="animation-delay: 1.5s">Saiba quais animais sempre sobram nas feiras de adoção e o porquê.</p>
-                    <p class="animated zoomIn" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                    <h5 class="animated bounceInRight" style="animation-delay: 1s">@Html.DisplayFor(model => model.PostBlog.Titulo)</h5>
+                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">@Html.DisplayFor(model => model.PostBlog.OlhoPost)</p>
+                    <p class="animated bounceInRight" style="animation-delay: 2s"><a asp-action="PostBlog" asp-controller="Pages" asp-route-id="@item.IdPostBlog">Ver post</a></p>
                 </div>
             </div>
             <!-- Slide 3-->
-            <div class="carousel-item" style="background-image: url(assets/img/correndo.jpg);">
+            <div class="carousel-item" style="background-image: url(@ViewData["filelocation"]?ver=1.3");">
                 <div class="carousel-caption d-md-block">
-                    <h5 class="animated zoomIn" style="animation-delay: 1s">Campanha de vacinação em Barra Bonita</h5>
-                    <p class="animated fadeInLeft" style="animation-delay: 1.5s">Por que devo vacinar meu pet?</p>
-                    <p class="animated zoomIn" style="animation-delay: 2s"><a href="#">Ver post</a></p>
+                    <h5 class="animated bounceInRight" style="animation-delay: 1s">@Html.DisplayFor(model => model.PostBlog.Titulo)</h5>
+                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">@Html.DisplayFor(model => model.PostBlog.OlhoPost)</p>
+                    <p class="animated bounceInRight" style="animation-delay: 2s"><a asp-action="PostBlog" asp-controller="Pages" asp-route-id="@item.IdPostBlog">Ver post</a></p>
                 </div>
             </div>
         </div> <!--End Carousel Inner -->
@@ -99,7 +99,7 @@
             <div class="col">
                 <h1>Últimas publicações</h1>
                 <p class="mt-3">As notícias e artigos mais recentes diretamente para você!</p>
-                <small>Acesse o <a href="Blog.html">Blog do CCZ</a> para ver mais posts.</small>
+                <small>Acesse o <a asp-action="Blog" asp-controller="Home">Blog do CCZ</a> para ver mais posts.</small>
             </div>
         </div>
     </div>
@@ -107,30 +107,30 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-    @foreach (var item in Model)
+    @foreach (var item in Model.PostsBlog.Take(3))
     {
         <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Foto de ">
+                <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Foto de ">
             </div>
             <div class="card-body">
-                <h5 class="card-title">@Html.DisplayFor(model => model.Animal.Nome)</h5>
-                <p class="card-text"@Html.DisplayFor(model => model.Animal.Historia)></p>
-                <a href="#" class="btn btn-primary">Ver post</a>
+                <h5 class="card-title">@Html.DisplayFor(model => model.PostBlog.Titulo)</h5>
+                <p class="card-text"@Html.DisplayFor(model => model.PostBlog.OlhoPost)></p>
+                <a asp-action="PostBlog" asp-controller="Pages" asp-route-id="@item.IdPostBlog" class="btn btn-primary">Ver post</a>
             </div>
         </div>
     }
     </div>
 </div>
 
-    <!--Área dos Cards (posts)-->
+    <!--Área dos Cards (animais perdidos)-->
     <section id="posts">
         <div class="container my-3 py-3 text-center">
           <div class="row mb-5">
             <div class="col">
                 <h1>Animais perdidos</h1>
                 <p class="mt-3">Por favor, entre em contato caso encontre algum dos animais abaixo.</p>
-                <small>Acesse o <a href="Blog.html">Cadê meu cão</a> para ver todos os animais registrados.</small>
+                <small>Acesse o <a asp-action="CadeMeuPet" asp-controller="Home">Cadê Meu Pet</a> para ver todos os animais perdidos.</small>
             </div>
         </div>
     </div>
@@ -138,47 +138,19 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
+        @foreach (var item in Model.AnimaisPerdidos.Take(3))
+        {
         <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">     
+                <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">     
             </div>
             <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
+                <h5 class="card-title">@Html.DisplayFor(model => item.AnimaisPerdidos.Nome)</h5>
+                <a asp-action="CadeMeuPetDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalPerdido" class="btn btn-primary">Ver detalhes</a>
             </div>
         </div>
+        }
 
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
-        </div>
-
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -189,7 +161,7 @@
             <div class="col">
                 <h1>Animais para adoção</h1>
                 <p class="mt-3">Seu novo melhor amigo está te esperando!</p>
-                <small>Acesse a página de <a href="adocao.html">Adoção</a> para ver mais animais.</small>
+                <small>Acesse a página de <a asp-action="Adocao" asp-controller="Home">Adoção</a> para ver mais animais.</small>
             </div>
         </div>
     </div>
@@ -197,46 +169,18 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
+        @foreach (var item in Model.Animaisccz.Take(3))
+        {
         <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-                <img class="card-img-top" src="assets/img/exemplocard.jpg" alt="Card image cap">     
+                <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">     
             </div>
             <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
+                <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
                 <a href="#" class="btn btn-primary">Ver post</a>
             </div>
         </div>
-
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/correndo.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
-        </div>
-
-        <div class="card shadow" style="width: 20rem;">
-            <div class="inner">
-                <img class="card-img-top" src="assets/img/4.jpg" alt="Card image cap">     
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Design</h5>
-                <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </p>
-                <a href="#" class="btn btn-primary">Ver post</a>
-            </div>
+        }
         </div>
     </div>
 </div>
