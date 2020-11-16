@@ -23,10 +23,14 @@ namespace SiteCCZ.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(IndexViewModel model)
         {
-            return View();
+            var postblog = _context.Postsblog.Find(model);
+            var animalperdido = _context.Animaisperdidos.Find(model);
+            var animal = _context.Animaisccz.Find(model);
+            return View(await model.ToListAsync());
         }
+
         public async Task<IActionResult> Adocao()
         {
             return View(await _context.Animaisccz.ToListAsync());

@@ -405,6 +405,7 @@ namespace SiteCCZ.Models
             OnModelCreatingPartial(modelBuilder);
         }
 
+    
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

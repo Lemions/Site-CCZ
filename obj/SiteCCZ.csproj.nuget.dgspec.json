@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\SiteCCZ.csproj": {}
+    "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\SiteCCZ.csproj": {
+    "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\SiteCCZ.csproj",
+        "projectUniqueName": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
         "projectName": "SiteCCZ",
-        "projectPath": "C:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\SiteCCZ.csproj",
-        "packagesPath": "C:\\Users\\Notebook\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\obj\\",
+        "projectPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
+        "packagesPath": "C:\\Users\\itsth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Notebook\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\itsth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.107\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
