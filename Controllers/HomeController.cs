@@ -23,12 +23,13 @@ namespace SiteCCZ.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index(IndexViewModel model)
+        public async Task<IActionResult> Index()
         {
-            var postblog = _context.Postsblog.Find(model);
-            var animalperdido = _context.Animaisperdidos.Find(model);
-            var animal = _context.Animaisccz.Find(model);
-            return View(await model.ToListAsync());
+            IndexViewModel model = new IndexViewModel();
+            model.Postblog = await _context.Postsblog.OrderByDescending(p => p.DataPublicacao).Take(3).ToListAsync();
+            model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).Take(3).ToListAsync();
+            model.Animal = await _context.Animaisccz.OrderByDescending(a => a.IdAnimal).Take(3).ToListAsync();
+            return View(model);
         }
 
         public async Task<IActionResult> Adocao()

@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\SiteCCZ.csproj",
+  "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\SiteCCZ.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,223 +14392,223 @@
   "RootNamespace": "SiteCCZ",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Adocao\\Details.cshtml",
-      "TargetPath": "Views\\Adocao\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Pages\\AdocaoDetalhes.cshtml",
-      "TargetPath": "Views\\Pages\\AdocaoDetalhes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Postsblog\\Create.cshtml",
-      "TargetPath": "Views\\Postsblog\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vermifugos\\Index.cshtml",
-      "TargetPath": "Views\\Vermifugos\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vacinas\\Create.cshtml",
-      "TargetPath": "Views\\Vacinas\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Animaisccz\\Create.cshtml",
-      "TargetPath": "Views\\Animaisccz\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Postsblog\\Index.cshtml",
-      "TargetPath": "Views\\Postsblog\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Admin\\Index.cshtml",
-      "TargetPath": "Views\\Admin\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Admin\\Login.cshtml",
-      "TargetPath": "Views\\Admin\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\Denuncias.cshtml",
-      "TargetPath": "Views\\Home\\Denuncias.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Animaisccz\\Index.cshtml",
-      "TargetPath": "Views\\Animaisccz\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\QuemSomos.cshtml",
-      "TargetPath": "Views\\Home\\QuemSomos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vermifugos\\Details.cshtml",
-      "TargetPath": "Views\\Vermifugos\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Postsblog\\Edit.cshtml",
-      "TargetPath": "Views\\Postsblog\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Pages\\CadeMeuPetDetalhes.cshtml",
-      "TargetPath": "Views\\Pages\\CadeMeuPetDetalhes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Adocao\\Edit.cshtml",
-      "TargetPath": "Views\\Adocao\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vacinas\\Edit.cshtml",
-      "TargetPath": "Views\\Vacinas\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Pages\\AdocaoEmAnalise.cshtml",
-      "TargetPath": "Views\\Pages\\AdocaoEmAnalise.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Pages\\Post.cshtml",
-      "TargetPath": "Views\\Pages\\Post.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vermifugos\\Create.cshtml",
-      "TargetPath": "Views\\Vermifugos\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vacinas\\Delete.cshtml",
-      "TargetPath": "Views\\Vacinas\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vacinas\\Details.cshtml",
-      "TargetPath": "Views\\Vacinas\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\CadeMeuPet.cshtml",
-      "TargetPath": "Views\\Home\\CadeMeuPet.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Postsblog\\Details.cshtml",
-      "TargetPath": "Views\\Postsblog\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vacinas\\Index.cshtml",
-      "TargetPath": "Views\\Vacinas\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Adocao\\Delete.cshtml",
-      "TargetPath": "Views\\Adocao\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\Adocao.cshtml",
-      "TargetPath": "Views\\Home\\Adocao.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Animaisccz\\Delete.cshtml",
-      "TargetPath": "Views\\Animaisccz\\Delete.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AdocaoEmAnalise.cshtml",
+      "TargetPath": "Views\\Pages\\AdocaoEmAnalise.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Adocao\\Create.cshtml",
-      "TargetPath": "Views\\Adocao\\Create.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Create.cshtml",
+      "TargetPath": "Views\\Postsblog\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vermifugos\\Edit.cshtml",
-      "TargetPath": "Views\\Vermifugos\\Edit.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Admin\\Login.cshtml",
+      "TargetPath": "Views\\Admin\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Pages\\TesteNovoPost.cshtml",
-      "TargetPath": "Views\\Pages\\TesteNovoPost.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Delete.cshtml",
+      "TargetPath": "Views\\Vacinas\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Animaisccz\\Edit.cshtml",
-      "TargetPath": "Views\\Animaisccz\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Adocao\\Index.cshtml",
-      "TargetPath": "Views\\Adocao\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Vermifugos\\Delete.cshtml",
-      "TargetPath": "Views\\Vermifugos\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Postsblog\\Delete.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Delete.cshtml",
       "TargetPath": "Views\\Postsblog\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Animaisccz\\Details.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Details.cshtml",
+      "TargetPath": "Views\\Vermifugos\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Blog.cshtml",
+      "TargetPath": "Views\\Home\\Blog.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\CadeMeuPetDetalhes.cshtml",
+      "TargetPath": "Views\\Pages\\CadeMeuPetDetalhes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\CadeMeuPet.cshtml",
+      "TargetPath": "Views\\Home\\CadeMeuPet.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Details.cshtml",
+      "TargetPath": "Views\\Vacinas\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Create.cshtml",
+      "TargetPath": "Views\\Vermifugos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Index.cshtml",
+      "TargetPath": "Views\\Adocao\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Index.cshtml",
+      "TargetPath": "Views\\Vermifugos\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\Post.cshtml",
+      "TargetPath": "Views\\Pages\\Post.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Delete.cshtml",
+      "TargetPath": "Views\\Animaisccz\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Denuncias.cshtml",
+      "TargetPath": "Views\\Home\\Denuncias.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Index.cshtml",
+      "TargetPath": "Views\\Animaisccz\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\QuemSomos.cshtml",
+      "TargetPath": "Views\\Home\\QuemSomos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Create.cshtml",
+      "TargetPath": "Views\\Adocao\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Details.cshtml",
+      "TargetPath": "Views\\Postsblog\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\TesteNovoPost.cshtml",
+      "TargetPath": "Views\\Pages\\TesteNovoPost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Details.cshtml",
       "TargetPath": "Views\\Animaisccz\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Notebook\\Desktop\\ProjetoCCZ\\Site-CCZ\\Views\\Home\\Blog.cshtml",
-      "TargetPath": "Views\\Home\\Blog.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Index.cshtml",
+      "TargetPath": "Views\\Vacinas\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Create.cshtml",
+      "TargetPath": "Views\\Vacinas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Create.cshtml",
+      "TargetPath": "Views\\Animaisccz\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AdocaoDetalhes.cshtml",
+      "TargetPath": "Views\\Pages\\AdocaoDetalhes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Edit.cshtml",
+      "TargetPath": "Views\\Adocao\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Details.cshtml",
+      "TargetPath": "Views\\Adocao\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Adocao.cshtml",
+      "TargetPath": "Views\\Home\\Adocao.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Delete.cshtml",
+      "TargetPath": "Views\\Adocao\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Edit.cshtml",
+      "TargetPath": "Views\\Animaisccz\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Edit.cshtml",
+      "TargetPath": "Views\\Vermifugos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Edit.cshtml",
+      "TargetPath": "Views\\Vacinas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Index.cshtml",
+      "TargetPath": "Views\\Postsblog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Delete.cshtml",
+      "TargetPath": "Views\\Vermifugos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Edit.cshtml",
+      "TargetPath": "Views\\Postsblog\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],
