@@ -103,7 +103,7 @@
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(model => item.Titulo)</h5>
                 <p class="card-text"@Html.DisplayFor(model => item.OlhoPost)></p>
-                <a asp-action="PostBlog" asp-controller="Pages" asp-route-id="@item.IdPostBlog" class="btn btn-primary">Ver post</a>
+                <a asp-action="Post" asp-controller="Pages" asp-route-id="@item.IdPostBlog" class="btn btn-primary">Ver post</a>
             </div>
         </div>
     }

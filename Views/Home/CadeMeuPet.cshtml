@@ -1,3 +1,4 @@
+@model SiteCCZ.ViewModel.CademeupetViewModel
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -69,7 +70,10 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="CADEMEUPET-ANUNCIE.html" class="btn btn-dark">Anunciar</a>
+                        <a href="CADEMEUPET-ANUNCIE.html" class="btn btn-dark">Encontrei um animal!</a>
+                    </div>
+                    <div class="col">
+                        <a href="CADEMEUPET-ANUNCIE.html" class="btn btn-dark">Perdi meu animal!</a>
                     </div>
                 </div>
             </div>
@@ -89,46 +93,19 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="card shadow" style="width: 20rem;">
+                @foreach (var item in Model.AnimalPerdido)
+                {
+                    <div class="card shadow" style="width: 20rem;">
                     <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Florzinha</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="CadeMeuPet-Florzinha.html" class="btn btn-light" style="background:#fc9f5b">Ver
+                        <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
+                        <a asp-action="CademeupetDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalPerdido" class="btn btn-light" style="background:#fc9f5b">Ver
                             Anúncio</a>
-
                     </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Amora</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Paçoca</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
-                    </div>
-                </div>
+                }
             </div>
         </div>
 
@@ -146,49 +123,21 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
+                @foreach (var item in Model.AnimalAchado) 
+                {
+                    <div class="card shadow" style="width: 20rem;">
+                        <div class="inner">
+                            <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(model => item.Bairro)</h5>
+                            <a asp-action="CademeupetDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalAchado" class="btn btn-light" style="background:#fc9f5b">Ver
+                            Anúncio</a>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Florzinha</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
-
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Amora</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
-                    </div>
-                </div>
-
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="card-img-top" src="/../assets/img/exemplocard.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Paçoca</h5>
-                        <p class="card-desc">Sed vehicula in neque eget bibendum. Vestibulum non feugiat tellus.
-                            Pellentesque maximus lorem quis metus convallis pretium. Ut accumsan nibh elit, eget
-                            elementum urna auctor et.</p>
-                        <a href="#" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
-                    </div>
-                </div>
+                }
             </div>
         </div>
-
-
     </section>
 
     <br>

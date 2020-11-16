@@ -42,9 +42,12 @@ namespace SiteCCZ.Controllers
             return View();
         }
 
-        public IActionResult CadeMeuPet()
+        public async Task<IActionResult> CadeMeuPet()
         {
-            return View();
+            CademeupetViewModel model = new CademeupetViewModel();
+            model.AnimalAchado = await _context.Animaisachados.OrderByDescending(a => a.IdAnimalAchado).ToListAsync();
+            model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).ToListAsync();
+            return View(model);
         }
 
         public IActionResult Denuncias()
