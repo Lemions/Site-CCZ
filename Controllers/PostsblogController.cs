@@ -18,14 +18,10 @@ namespace SiteCCZ.Controllers
     public class PostsblogController : Controller
     {
         private readonly Contexto _context;
-        private readonly IWebHostEnvironment _he;
-        private readonly IConfiguration _config;
 
-        public PostsblogController(Contexto context, IWebHostEnvironment he, IConfiguration config)
+        public PostsblogController(Contexto context)
         {
             _context = context;
-            _he = he;
-            _config =config;
         }
 
         // GET: Postsblog
@@ -49,9 +45,6 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            var filename = "/img/postblog" + id + ".jpg";
-            ViewData["filelocation"] = filename;
-
             return View(postsblog);
         }
 
@@ -66,22 +59,12 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Imagem,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog, IFormFile pic)
+        public async Task<IActionResult> Create([Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Imagem,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(postsblog);
                 await _context.SaveChangesAsync();
-
-                string l = postsblog.IdPostBlog + ".jpg";
-
-                var caminho = _config.GetValue<string>("Upload:ImagensPost");
-
-                var arquivo = Path.Combine(_he.WebRootPath, caminho, l);
-
-                FileStream filestream = new FileStream(arquivo, FileMode.Create);
-                pic.CopyTo(filestream);
-                filestream.Close();
 
                 return RedirectToAction(nameof(Index));
             }
@@ -101,6 +84,7 @@ namespace SiteCCZ.Controllers
             {
                 return NotFound();
             }
+
             return View(postsblog);
         }
 

@@ -2,7 +2,7 @@
 
 .titulo-noticia {
     margin-top: 40px;
-    background-image: url("https://www.gannett-cdn.com/presto/2020/03/24/USAT/866ee04e-9c56-4f84-ada3-e0c0ea0c0fb3-XXX_FUN_SMARTPET_041814.JPG?crop=3734,2100,x0,y29&width=3200&height=1680&fit=bounds");
+    background-image: url("preview-img");
     background-size: cover;
     background-repeat: no-repeat;
     filter: brightness(0.7);

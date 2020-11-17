@@ -97,7 +97,7 @@
                 <input asp-for="Foto" type="file" name="pic" class="file-chooser" accept="image/*" required />
                 <span asp-validation-for="Foto" class="text-danger"></span>
             </div>
-            <img class="preview-img">
+            <img class="preview-img" src="@ViewData["filelocation"]?ver=1.3" />
 
             <div class="form-group">
                 <label asp-for="Historia" class="control-label">História</label>

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using SiteCCZ.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using SiteCCZ.Models;
 using SiteCCZ.ViewModel;
-
 
 namespace SiteCCZ.Controllers
 {
@@ -71,14 +70,32 @@ namespace SiteCCZ.Controllers
             return View();
         }
 
-        public IActionResult Post()
+        public IActionResult TesteNovoPost()
         {
             return View();
         }
 
-        public IActionResult TesteNovoPost()
+        //GET: Postsblog
+        public async Task<IActionResult> Post(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            PostblogViewModel model = new PostblogViewModel();
+            model.PostBlogRecomendado = await _context.Postsblog.OrderByDescending(p => p.DataPublicacao).Take(3).ToListAsync();
+            model.PostBlog = await _context.Postsblog
+                .FirstOrDefaultAsync(m => m.IdPostBlog == id);
+            if (model.PostBlog == null)
+            {
+                return NotFound();
+            }
+
+            var filename = "/img/postblog" + id + ".jpg";
+            ViewData["filelocation"] = filename;
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

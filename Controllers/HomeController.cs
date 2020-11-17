@@ -24,11 +24,12 @@ namespace SiteCCZ.Controllers
         }
 
         public async Task<IActionResult> Index()
-        {
+        {            
             IndexViewModel model = new IndexViewModel();
             model.Postblog = await _context.Postsblog.OrderByDescending(p => p.DataPublicacao).Take(3).ToListAsync();
             model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).Take(3).ToListAsync();
             model.Animal = await _context.Animaisccz.OrderByDescending(a => a.IdAnimal).Take(3).ToListAsync();
+            
             return View(model);
         }
 
