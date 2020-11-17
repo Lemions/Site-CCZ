@@ -93,11 +93,11 @@
                 <span asp-validation-for="Adotavel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Foto" class="control-label"></label> <br />
-                <input asp-for="Foto" type="file" name="pic" class="file-chooser" accept="image/*" required />
+                <label asp-for="Foto" class="control-label">Foto</label>
+                <input asp-for="Foto" type="file" class="form-control-file" accept=".jpg,.jpeg,.png" required />
                 <span asp-validation-for="Foto" class="text-danger"></span>
+                <img src="" class="img-fluid" id='PreviewFoto' />
             </div>
-            <img class="preview-img">
 
             <div class="form-group">
                 <label asp-for="Historia" class="control-label">História</label>
@@ -114,18 +114,19 @@
     <a asp-action="Index">Voltar para lista de animais</a>
 </div>
 
-<!-- Script para pré-visualização de imagem -->
-<script>
-    const $ = document.querySelector.bind(document);
-    const previewImg = $('.preview-img');
-    const fileChooser = $('.file-chooser');
+<!-- Script de imagem (create animalccz) -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
-    fileChooser.onchange = e => {
-        const fileToUpload = e.target.files.item(0);
-        const reader = new FileReader();
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewFoto');
+                    img.scr = URL.createObjectURL(this.files[0];)
+                }
+            });
+        });
+    </script>
+}
 
-        reader.onload = e => previewImg.src = e.target.result;
-
-        reader.readAsDataURL(fileToUpload);
-    };
-</script>

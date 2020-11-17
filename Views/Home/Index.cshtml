@@ -160,7 +160,7 @@
         {
         <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-                <img class="card-img-top preview-img" src="@item.Foto" alt="Foto de um @item.Especie @item.Cor">     
+                <img class="card-img-top img-fluid" src="@Url.Content(item.Foto)" alt="Foto de um @item.Especie @item.Cor">     
             </div>
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>

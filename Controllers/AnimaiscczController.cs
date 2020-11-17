@@ -18,14 +18,12 @@ namespace SiteCCZ.Controllers
     public class AnimaiscczController : Controller
     {
         private readonly Contexto _context;
-        private readonly IWebHostEnvironment _he;
-        private readonly IConfiguration _config;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public AnimaiscczController(Contexto context, IWebHostEnvironment he, IConfiguration config)
+        public AnimaiscczController(Contexto context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
-            _he = he;
-            _config =config;
+            webHostEnvironment = hostEnvironment;
         }
 
         // GET: Animaisccz
@@ -48,9 +46,6 @@ namespace SiteCCZ.Controllers
             {
                 return NotFound();
             }
-
-            var filename = "/img/" + id + ".jpg";
-            ViewData["filelocation"] = filename;
             
             return View(animaisccz);
         }
@@ -66,26 +61,22 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz, IFormFile pic)
+        public async Task<IActionResult> Create([Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz, IFormFile Foto)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(animaisccz);
-                await _context.SaveChangesAsync();
+            if (Foto!= null)
+                {
+                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisccz");
+                    var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
+                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                    {
+                        await Foto.CopyToAsync(stream);
+                    };
+                    animaisccz.Foto = "/img/animaisccz/" + nomeArquivo;
+                }
 
-                string l = animaisccz.IdAnimal + ".jpg";
-
-                var caminho = _config.GetValue<string>("Upload:Imagens");
-
-                var arquivo = Path.Combine(_he.WebRootPath, caminho, l);
-
-                FileStream filestream = new FileStream(arquivo, FileMode.Create);
-                pic.CopyTo(filestream);
-                filestream.Close();
-
-
-                return RedirectToAction(nameof(Index));
-            }
+            _context.Add(animaisccz);
+            await _context.SaveChangesAsync();
             return View(animaisccz);
         }
 
@@ -103,9 +94,6 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            var filename = "/img/" + id + ".jpg";
-            ViewData["filelocation"] = filename;
-
             return View(animaisccz);
         }
 
@@ -114,7 +102,7 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz, IFormFile pic)
+        public async Task<IActionResult> Edit(int id, [Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz)
         {
             if (id != animaisccz.IdAnimal)
             {
@@ -127,15 +115,6 @@ namespace SiteCCZ.Controllers
                 {
                     _context.Update(animaisccz);
                     await _context.SaveChangesAsync();
-
-                    string l = animaisccz.IdAnimal + ".jpg";
-                    var caminho = _config.GetValue<string>("Upload:Imagens");
-                    var arquivo = Path.Combine(_he.WebRootPath, caminho, l);
-                    System.IO.File.Delete(arquivo);
-
-                    FileStream filestream = new FileStream(arquivo, FileMode.Create);
-                    pic.CopyTo(filestream);
-                    filestream.Close();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -168,9 +147,6 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            var filename = "/img/" + id + ".jpg";
-            ViewData["filelocation"] = filename;
-
             return View(animaisccz);
         }
 
@@ -182,11 +158,6 @@ namespace SiteCCZ.Controllers
             var animaisccz = await _context.Animaisccz.FindAsync(id);
             _context.Animaisccz.Remove(animaisccz);
             await _context.SaveChangesAsync();
-
-            string l = animaisccz.IdAnimal + ".jpg";
-            var caminho = _config.GetValue<string>("Upload:Imagens");
-            var arquivo = Path.Combine(_he.WebRootPath, caminho, l);
-            System.IO.File.Delete(arquivo);
 
             return RedirectToAction(nameof(Index));
         }
