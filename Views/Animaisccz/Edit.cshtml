@@ -94,8 +94,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Foto" class="control-label"></label> <br />
-                <input asp-for="Foto" class="form-control" required />
+                <input type="hidden" asp-for="Foto" />
+                <input id="NovaFoto" name="NovaFoto" type="file" class="form-control-file" accept=".jpg,.jpeg,.png,.gif" required />
                 <span asp-validation-for="Foto" class="text-danger"></span>
+                <img src="@(@System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Foto) ? Url.Content(Model.Foto) : Url.Content("~/img/sem_foto.png"))" class="img-fluid" id='PreviewFoto' />
             </div>
 
             <div class="form-group">
@@ -115,17 +117,17 @@
 </div>
 
 <!-- Script para pré-visualização de imagem -->
-<script>
-    const $ = document.querySelector.bind(document);
-    const previewImg = $('.preview-img');
-    const fileChooser = $('.file-chooser');
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
-    fileChooser.onchange = e => {
-        const fileToUpload = e.target.files.item(0);
-        const reader = new FileReader();
-
-        reader.onload = e => previewImg.src = e.target.result;
-
-        reader.readAsDataURL(fileToUpload);
-    };
-</script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewFoto');
+                    img.scr = URL.createObjectURL(this.files[0];)
+                }
+            });
+        });
+    </script>
+}

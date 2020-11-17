@@ -46,7 +46,7 @@ namespace SiteCCZ.Controllers
             {
                 return NotFound();
             }
-            
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(animaisccz);
         }
 
@@ -93,7 +93,7 @@ namespace SiteCCZ.Controllers
             {
                 return NotFound();
             }
-
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(animaisccz);
         }
 
@@ -102,7 +102,7 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz)
+        public async Task<IActionResult> Edit(int id, [Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz, IFormFile NovaFoto)
         {
             if (id != animaisccz.IdAnimal)
             {
@@ -113,6 +113,17 @@ namespace SiteCCZ.Controllers
             {
                 try
                 {
+                    if (NovaFoto!= null)
+                {
+                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisccz");
+                    var nomeArquivo = Guid.NewGuid().ToString() + " " + NovaFoto.FileName;
+                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                    {
+                        await NovaFoto.CopyToAsync(stream);
+                    };
+                    animaisccz.Foto = "/img/animaisccz/" + nomeArquivo;
+                }
                     _context.Update(animaisccz);
                     await _context.SaveChangesAsync();
                 }
@@ -129,6 +140,7 @@ namespace SiteCCZ.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(animaisccz);
         }
 
