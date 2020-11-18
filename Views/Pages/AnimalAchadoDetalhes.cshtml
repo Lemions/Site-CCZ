@@ -1,3 +1,4 @@
+@model SiteCCZ.Models.Animaisachados
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -11,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Site CCZ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/../assets/img/logo-png.png">
 
     <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
@@ -27,7 +29,7 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo.png"></a>
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo-png.png" alt="Logo CCZ"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,61 +60,29 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col">
-                    <h1 style="margin-top:60px; text-align:left;">Procura-se Florzinha</h1>
+                    <h1 style="margin-top:60px; text-align:left;">Animal perdido</h1>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col">
-                    <img style="width: 400px;" src="/../assets/img/exemplocard.jpg">
+                    <img class="img-fluid" src="@Url.Content(Model.Foto)" style="width: 400px;" />
                 </div>
                 <div class="col">
                     <h6 style="text-align:left;"><b>DESCRIÇÃO</b></h6>
-                    <p style="text-align:left;">Sed vehicula in neque eget bibendum.
-                    Vestibulum non feugiat tellus. Pellentesque maximus lorem quis metus convallis pretium. </p>
+                    <p style="text-align:left;">@Html.DisplayFor(model => model.Detalhes)</p>
                     <h6 style="text-align:left;"><b>CARACTERÍSTICAS</b></h6>
                     <dl>
-                        <dd  style="text-align:left;">RAÇA:</dd>
-                        <dd  style="text-align:left;">COR:</dd>
-                        <dd  style="text-align:left;">SEXO:</dd>
-                        <dd  style="text-align:left;">TAMANHO:</dd>
-                        <dd  style="text-align:left;">ÚLTIMO LUGAR VISTO:</dd>
+                        <dd  style="text-align:left;">@Html.DisplayFor(model => model.Especie)</dd>
+                        <dd  style="text-align:left;">Raça: @Html.DisplayFor(model => model.Raca)</dd>
+                        <dd  style="text-align:left;">Quem encontrou? @Html.DisplayFor(model => model.AchadorNome)</dd>
+                        <dd  style="text-align:left;">Telefone para contato: @Html.DisplayFor(model => model.AchadorTelefone)</dd>
+                        <dd  style="text-align:left;">Bairro encontrado: @Html.DisplayFor(model => model.Bairro)</dd>
                     </dl>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- FORMULÁRIO -->
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <form>
-                <br>
-                <h3 style="text-align:left;">Entre em Contato</h3>
-                <div class="form-group form-adocao">
-                    <label for="text">Nome</label>
-                    <input type="text" class="form-control" id="Nome" aria-describedby="nome">
-                </div>
-                <div class="form-group">
-                    <label for="Email">Endereço de email</label>
-                    <input type="email" class="form-control" id="Email" aria-describedby="email">
-                </div>
-                <div class="form-group">
-                    <label for="text">Seu telefone</label>
-                    <input type="text" class="form-control" id="telefone">
-                </div>
-                <div class="form-group">
-                    <label for="Textarea">Sua mensagem</label>
-                    <textarea class="form-control" id="Textarea" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-light" style="background:#fc9f5b">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
     <footer>
         <div class="footer-top">
             <div class="container">

@@ -1,0 +1,192 @@
+@model SiteCCZ.Models.Animaisperdidos
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Cadastrar animal perdido";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastrar animal perdido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/../assets/img/logo-png.png">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo-png.png" alt="Logo CCZ"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="CadeMeuPet" asp-controller="Home">CADÊ MEU PET?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Adocao" asp-controller="Home">ADOÇÃO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Denuncias" asp-controller="Home">DENÚNCIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="QuemSomos" asp-controller="Home">QUEM SOMOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="col" id="TituloCademeupet" style="padding: 15px;">
+                <h1 style="text-align:left;">Perdi meu pet!</h1>
+                <br>
+                <p style="text-align: justify">Caso você perdeu seu pet, cadastrei ele aqui para outras pessoas poderem ver!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6" style="padding-top: 5px;">
+                    <form asp-action="CadastrarAnimalPerdido" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Nome" class="control-label">Nome do animal</label>
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Especie" class="control-label">Espécie</label>
+                            <div class="radio-container">
+                                <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Cachorro" id="Cachorro"/>
+                                <label for="Cachorro">Cachorro</label>
+                                <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Gato" id="Gato"/>
+                                <label for="Gato">Gato</label>
+                                <input asp-for="Especie" class="form-control" type="radio" name="Especie" value="Outro" id="Outro"/>
+                                <label for="Outro">Outro</label>
+                            </div>
+                            <span asp-validation-for="Especie" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Raca" class="control-label">Raça</label>
+                            <input asp-for="Raca" class="form-control" />
+                            <span asp-validation-for="Raca" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Foto" class="control-label">Foto</label>
+                            <input asp-for="Foto" type="file" class="form-control-file" accept=".jpg,.jpeg,.png" required />
+                            <span asp-validation-for="Foto" class="text-danger"></span>
+                            <img src="" class="img-fluid" id='PreviewFoto' />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TelefoneDono" class="control-label">Telefone para contato</label>
+                            <input asp-for="TelefoneDono" class="form-control" />
+                            <span asp-validation-for="TelefoneDono" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Detalhes" class="control-label">Mais informações</label>
+                            <input asp-for="Detalhes" class="form-control" />
+                            <span asp-validation-for="Detalhes" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-about wow fadeInUp">
+                        <img src="/../assets/img/logo.png" style="width: 150px">
+                        <p>Centro de Controle de Zoonozes de Barra Bonita</p>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+                        <h3>Contato</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Links</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><a class="scroll-link" asp-action="Index" asp-controller="Home">Home</a></p>
+                                <p><a asp-action="Blog" asp-controller="Home">Blog do CCZ</a></p>
+                                <p><a asp-action="CadeMeuPet" asp-controller="Home">Cadê meu Pet?</a></p>
+                                <p><a asp-action="Adocao" asp-controller="Home">Adoção</a></p>
+                                <p><a asp-action="Denuncias" asp-controller="Home">Denúncias</a></p>
+                                <p><a asp-action="QuemSomos" asp-controller="Home">Quem somos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de imagem (create animalccz) -->
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+        <script type="text/javascript">
+            window.addEventListener('load', function() {
+                document.querySelector('input[type="file"]').addEventListener('change', function () {
+                    if (this.files && this.files[0]) {
+                        var img = document.getElementById('PreviewFoto');
+                        img.scr = URL.createObjectURL(this.files[0];)
+                    }
+                });
+            });
+        </script>
+    }
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+</body>
+
+</html>

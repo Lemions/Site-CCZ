@@ -154,3 +154,22 @@ h3 {
 .inner:hover img{
     transform: scale(1.5);
 }
+
+.radio-container input[type="radio"] {
+	display: none;
+}
+  
+.radio-container label {
+	  display: inline-block;
+	  padding: 6px 17px;
+	  background-color: #e6e6e6;
+	  cursor: pointer;
+	  border-radius: 10px;
+	  transition: 0.1s;
+}
+  
+.radio-container input[type="radio"]:checked+label {
+	  background-color: #f0a45d;
+	  border-radius: 2px;
+  
+}  

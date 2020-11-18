@@ -9,6 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SiteCCZ.Models;
 using SiteCCZ.ViewModel;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 namespace SiteCCZ.Controllers
 {
@@ -16,11 +20,13 @@ namespace SiteCCZ.Controllers
     {
         private readonly Contexto _context;
         private readonly ILogger<PagesController> _logger;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public PagesController(ILogger<PagesController> logger, Contexto context)
+        public PagesController(ILogger<PagesController> logger, Contexto context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
             _logger = logger;
+            webHostEnvironment = hostEnvironment;
         }
 
 
@@ -65,9 +71,92 @@ namespace SiteCCZ.Controllers
             return View(model);
         }
 
-        public IActionResult CadeMeuPetDetalhes()
+        public async Task<IActionResult> AnimalAchadoDetalhes(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var animaisachados = await _context.Animaisachados
+                .FirstOrDefaultAsync(m => m.IdAnimalAchado == id);
+            if (animaisachados == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+            return View(animaisachados);
+        }
+
+        public IActionResult CadastrarAnimalAchado()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CadastrarAnimalAchado([Bind("IdAnimalAchado,Foto,DescricaoFoto,Especie,Raca,AchadorNome,AchadorTelefone,Bairro,Detalhes")] Animaisachados animaisachados, IFormFile Foto)
+        {
+                if (Foto!= null)
+                {
+                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisachados");
+                    var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
+                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                    {
+                        await Foto.CopyToAsync(stream);
+                    };
+                    animaisachados.Foto = "/img/animaisachados/" + nomeArquivo;
+                }
+
+                _context.Add(animaisachados);
+                await _context.SaveChangesAsync();
+                return View(animaisachados);
+        }
+
+        public async Task<IActionResult> AnimalPerdidoDetalhes(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var animaisperdidos = await _context.Animaisperdidos
+                .FirstOrDefaultAsync(m => m.IdAnimalPerdido == id);
+            if (animaisperdidos == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+            return View(animaisperdidos);
+        }
+
+        public IActionResult CadastrarAnimalPerdido()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CadastrarAnimalPerdido([Bind("IdAnimalPerdido,Nome,Especie,Raca,Foto,TelefoneDono,Detalhes")] Animaisperdidos animaisperdidos, IFormFile Foto)
+        {
+                if (Foto!= null)
+                {
+                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisperdidos");
+                    var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
+                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                    {
+                        await Foto.CopyToAsync(stream);
+                    };
+                    animaisperdidos.Foto = "/img/animaisperdidos/" + nomeArquivo;
+                }
+
+                _context.Add(animaisperdidos);
+                await _context.SaveChangesAsync();
+                return View(animaisperdidos);
         }
 
         public IActionResult TesteNovoPost()

@@ -842,7 +842,6 @@ C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\H
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Home\QuemSomos.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoDetalhes.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoEmAnalise.cshtml.g.cs
-C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadeMeuPetDetalhes.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\Post.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\TesteNovoPost.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Postsblog\Create.cshtml.g.cs
@@ -1005,3 +1004,17 @@ C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.cspro
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\staticwebassets\SiteCCZ.StaticWebAssets.Manifest.cache
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\staticwebassets\SiteCCZ.StaticWebAssets.xml
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.genruntimeconfig.cache
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AnimalAchadoDetalhes.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AnimalPerdidoDetalhes.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisachados\Create.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisachados\Delete.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisachados\Details.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisachados\Edit.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisachados\Index.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Create.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Delete.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Details.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Edit.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Index.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadastrarAnimalPerdido.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadastrarAnimalAchado.cshtml.g.cs
