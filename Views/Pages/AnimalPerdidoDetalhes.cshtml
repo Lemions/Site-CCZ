@@ -65,7 +65,7 @@
             </div>
             <div class="row mb-5">
                 <div class="col">
-                    <img class="img-fluid" src="@Url.Content(Model.Foto)" style="width: 400px;" />
+                    <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Foto) ? Url.Content(Model.Foto) : Url.Content("~/img/sem_foto.png"))" style="width: 400px;" />
                 </div>
                 <div class="col">
                     <h6 style="text-align:left;"><b>DESCRIÇÃO</b></h6>

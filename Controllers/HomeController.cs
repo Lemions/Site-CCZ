@@ -9,6 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SiteCCZ.Models;
 using SiteCCZ.ViewModel;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 namespace SiteCCZ.Controllers
 {
@@ -16,11 +20,13 @@ namespace SiteCCZ.Controllers
     {
         private readonly Contexto _context;
         private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public HomeController(ILogger<HomeController> logger, Contexto context)
+        public HomeController(ILogger<HomeController> logger, Contexto context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
             _logger = logger;
+            webHostEnvironment = hostEnvironment;
         }
 
         public async Task<IActionResult> Index()
@@ -30,11 +36,14 @@ namespace SiteCCZ.Controllers
             model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).Take(3).ToListAsync();
             model.Animal = await _context.Animaisccz.OrderByDescending(a => a.IdAnimal).Take(3).ToListAsync();
             
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+
             return View(model);
         }
 
         public async Task<IActionResult> Adocao()
         {
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(await _context.Animaisccz.ToListAsync());
         }
 
@@ -48,6 +57,9 @@ namespace SiteCCZ.Controllers
             CademeupetViewModel model = new CademeupetViewModel();
             model.AnimalAchado = await _context.Animaisachados.OrderByDescending(a => a.IdAnimalAchado).ToListAsync();
             model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).ToListAsync();
+            
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+
             return View(model);
         }
 

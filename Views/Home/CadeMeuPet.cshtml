@@ -97,7 +97,7 @@
                 {
                     <div class="card shadow" style="width: 20rem;">
                     <div class="inner">
-                        <img class="card-img-top img-fluid" src="@Url.Content(item.Foto)" />
+                        <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))" />
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
@@ -127,7 +127,7 @@
                 {
                     <div class="card shadow" style="width: 20rem;">
                         <div class="inner">
-                            <img class="card-img-top img-fluid" src="@Url.Content(item.Foto)" />
+                            <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))" />
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">@Html.DisplayFor(model => item.Bairro)</h5>

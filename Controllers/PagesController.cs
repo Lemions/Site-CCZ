@@ -36,10 +36,11 @@ namespace SiteCCZ.Controllers
             var adocao = new AdocaoViewModel();
             adocao.Animal = animal;
             adocao.IdAnimal = id ?? 0;
+
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+            
             return View(adocao);
         }
-
- 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -61,6 +62,9 @@ namespace SiteCCZ.Controllers
             }
             var animal = _context.Animaisccz.Find(model.IdAnimal);
             model.Animal = animal;
+
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+
             return View(model);
         }
 
@@ -181,8 +185,7 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            var filename = "/img/postblog" + id + ".jpg";
-            ViewData["filelocation"] = filename;
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
 
             return View(model);
         }

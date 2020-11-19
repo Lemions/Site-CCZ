@@ -29,10 +29,10 @@
             @Html.DisplayFor(model => model.Conteudo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Imagem)
+            @Html.DisplayNameFor(model => model.Foto)
         </dt>
         <dd class = "col-sm-10">
-            <img class="img-fluid" src="@(@System.IO.File.Exists(ViewData["CaminhoImagem"] + Model.Imagem) ? Url.Content(Model.Imagem) : Url.Content("~/img/sem_foto.png"))" />
+            <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Foto) ? Url.Content(Model.Foto) : Url.Content("~/img/sem_foto.png"))" />
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.DescricaoImagem)

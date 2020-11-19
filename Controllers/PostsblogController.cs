@@ -47,7 +47,7 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            ViewData["CaminhoImagem"] = webHostEnvironment.WebRootPath;
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(postsblog);
         }
 
@@ -62,22 +62,22 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Imagem,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog, IFormFile Imagem)
+        public async Task<IActionResult> Create([Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Foto,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog, IFormFile Foto)
         {
-            if (Imagem!= null)
-                {
-                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\postsblog");
-                    var nomeArquivo = Guid.NewGuid().ToString() + " " + Imagem.FileName;
-                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
-                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                if (Foto!= null)
                     {
-                        await Imagem.CopyToAsync(stream);
-                    };
-                    postsblog.Imagem = "/img/postsblog/" + nomeArquivo;
-                }
-            _context.Add(postsblog);
-            await _context.SaveChangesAsync();
-            return View(postsblog);
+                        string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\postsblog");
+                        var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
+                        string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                        using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                        {
+                            await Foto.CopyToAsync(stream);
+                        };
+                        postsblog.Foto = "/img/postsblog/" + nomeArquivo;
+                    }
+                _context.Add(postsblog);
+                await _context.SaveChangesAsync();
+                return View(postsblog);
         }
 
         // GET: Postsblog/Edit/5
@@ -94,7 +94,7 @@ namespace SiteCCZ.Controllers
                 return NotFound();
             }
 
-            ViewData["CaminhoImagem"] = webHostEnvironment.WebRootPath;
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(postsblog);
         }
 
@@ -103,7 +103,7 @@ namespace SiteCCZ.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Imagem,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog, IFormFile NovaImagem)
+        public async Task<IActionResult> Edit(int id, [Bind("IdPostBlog,DataPublicacao,Autor,Conteudo,Foto,DescricaoImagem,Titulo,OlhoPost")] Postsblog postsblog, IFormFile NovaFoto)
         {
             if (id != postsblog.IdPostBlog)
             {
@@ -114,16 +114,16 @@ namespace SiteCCZ.Controllers
             {
                 try
                 {
-                    if (NovaImagem!= null)
+                    if (NovaFoto != null)
                     {
                         string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\postsblog");
-                        var nomeArquivo = Guid.NewGuid().ToString() + " " + NovaImagem.FileName;
+                        var nomeArquivo = Guid.NewGuid().ToString() + " " + NovaFoto.FileName;
                         string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
                         using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
                         {
-                            await NovaImagem.CopyToAsync(stream);
+                            await NovaFoto.CopyToAsync(stream);
                         };
-                        postsblog.Imagem = "/img/postsblog/" + nomeArquivo;
+                        postsblog.Foto = "/img/postsblog/" + nomeArquivo;
                     }
                     _context.Update(postsblog);
                     await _context.SaveChangesAsync();

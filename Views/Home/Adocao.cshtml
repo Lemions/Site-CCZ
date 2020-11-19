@@ -104,7 +104,7 @@
                 @foreach (var item in Model) {
                 <div class="card shadow" style="width: 20rem;">
                     <div class="inner">
-                        <img class="card-img-top" src="@ViewData["filelocation"]?ver=1.3" alt="Card image cap">
+                        <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
