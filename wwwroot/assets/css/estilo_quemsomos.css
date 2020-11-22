@@ -1,10 +1,58 @@
-html, body{
-  height: 100%;
-}
-
 #textoicone{
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #f8f9fa;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#textoicone h1 {
+  padding-bottom: 40px;
+}
+
+#textoicone h3 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#mapa {
+  background-color: #f5fffa;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+#mapa h1 {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 760px) {
+    #mapa p {
+      padding-left: 50px;
+    }
+  }
+
+.carousel-inner {
+  margin-right: 0px;
+}
+
+.carousel-item{
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-inner h1,
+.carousel-inner p{
+  align-items: center;
+}
+
+.carousel-inner p{
+  font-size: 18px;
+}
+
+.carousel-caption{
+  bottom: 220px;
+  align-items: center;
 }

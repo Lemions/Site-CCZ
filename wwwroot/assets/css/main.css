@@ -7,8 +7,6 @@ body {
 	text-align: left;
 }
 
-
-
 a {
     color: #e38b4b;
 }
@@ -21,9 +19,9 @@ h1 {
     font-family: 'Oswald', sans-serif;
 }
 
-h5 {
-	font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+.carousel-inner h1 {
+	font-size: 50px;
+	color: #ffff;
 }
 
 h2 {
@@ -36,6 +34,13 @@ h3 {
 	color: #333;
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+	font-size: 70px;
+	color: #ffff;
+	font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
 
 .btn-primary {
@@ -88,11 +93,14 @@ h3 {
 .footer-top {
     padding-top: 27px;
     background: #ece4b7;
-    text-align: center;
+	text-align: center;
+	
 }
+
 .footer-top h3{
     font-family: 'Oswald', sans-serif;
 }
+
 .footer-top p,a{
     font-family: 'Open Sans', sans-serif;
 }

@@ -47,9 +47,11 @@ namespace SiteCCZ.Controllers
             return View(await _context.Animaisccz.ToListAsync());
         }
 
-        public IActionResult Blog()
+        public async Task<IActionResult> Blog()
         {
-            return View();
+            var postsblog = await _context.Postsblog.ToListAsync();
+            ViewData["Caminho"] = webHostEnvironment.WebRootPath;
+            return View(postsblog);
         }
 
         public async Task<IActionResult> CadeMeuPet()

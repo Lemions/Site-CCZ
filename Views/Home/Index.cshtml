@@ -2,6 +2,7 @@
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
+    var auxiliar = Model.Postblog.ToArray()[0].Titulo;
 }
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/carousel.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body>  
@@ -56,18 +58,17 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <!-- Slide 1 -->
             @foreach (var item in Model.Postblog) 
             {
-                <div class="carousel-item active" style="background-image: url('@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))');">
-                <div class="carousel-caption d-md-block">
-                    <h5 class="animated bounceInRight" style="animation-delay: 1s">@Html.DisplayFor(model => item.Titulo)</h5>
-                    <p class="animated bounceInLeft" style="animation-delay: 1.5s">@Html.DisplayFor(model => item.OlhoPost)</p>
-                    <p class="animated bounceInRight" style="animation-delay: 2s"><a asp-action="Post" asp-controller="Pages" asp-route-id="@item.IdPostBlog">Ver post</a></p>
-                </div>
+                <div class="carousel-item @(item.Titulo == auxiliar ? "active" : "")" style="background-image: url('@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))');">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="animated bounceInRight" style="animation-delay: 0.5s">@Html.DisplayFor(model => item.Titulo)</h1>
+                        <p class="animated bounceInLeft" style="animation-delay: 0.5s">@Html.DisplayFor(model => item.OlhoPost)</p>
+                        <a class="animated bounceInRight" style="animation-delay: 0.5s" asp-action="Post" asp-controller="Pages" asp-route-id="@item.IdPostBlog">Ver post</a>
+                    </div>
                 </div>
             }
-        </div> <!--End Carousel Inner -->
+        </div>
 
         <!-- Prev and Next Buttons-->
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -102,7 +103,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(model => item.Titulo)</h5>
-                <p class="card-text"@Html.DisplayFor(model => item.OlhoPost)></p>
+                <p class="card-text">@Html.DisplayFor(model => item.OlhoPost)</p>
                 <a asp-action="Post" asp-controller="Pages" asp-route-id="@item.IdPostBlog" class="btn btn-primary">Ver post</a>
             </div>
         </div>
@@ -179,7 +180,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 footer-about wow fadeInUp">
-                        <img src="assets/img/logo.png" style="width: 150px">
+                        <img src="../assets/img/logo-png.png" style="width: 200px">
                         <p>Centro de Controle de Zoonozes de Barra Bonita</p>
                     </div>
                     <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">

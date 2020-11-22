@@ -843,7 +843,6 @@ C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\H
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoDetalhes.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AdocaoEmAnalise.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\Post.cshtml.g.cs
-C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\TesteNovoPost.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Postsblog\Create.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Postsblog\Delete.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Postsblog\Details.cshtml.g.cs
@@ -1018,3 +1017,6 @@ C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\A
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Animaisperdidos\Index.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadastrarAnimalPerdido.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\CadastrarAnimalAchado.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Delete.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Details.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Index.cshtml.g.cs

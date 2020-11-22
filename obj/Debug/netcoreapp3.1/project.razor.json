@@ -14407,8 +14407,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisperdidos\\Delete.cshtml",
+      "TargetPath": "Views\\Animaisperdidos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Admin\\Login.cshtml",
       "TargetPath": "Views\\Admin\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisperdidos\\Details.cshtml",
+      "TargetPath": "Views\\Animaisperdidos\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14432,8 +14442,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\CadeMeuPetDetalhes.cshtml",
-      "TargetPath": "Views\\Pages\\CadeMeuPetDetalhes.cshtml",
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisachados\\Edit.cshtml",
+      "TargetPath": "Views\\Animaisachados\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14457,8 +14467,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\CadastrarAnimalAchado.cshtml",
+      "TargetPath": "Views\\Pages\\CadastrarAnimalAchado.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Index.cshtml",
       "TargetPath": "Views\\Adocao\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Contatosadocao\\Index.cshtml",
+      "TargetPath": "Views\\Contatosadocao\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14477,6 +14497,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisperdidos\\Create.cshtml",
+      "TargetPath": "Views\\Animaisperdidos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -14489,6 +14514,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Denuncias.cshtml",
       "TargetPath": "Views\\Home\\Denuncias.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisperdidos\\Index.cshtml",
+      "TargetPath": "Views\\Animaisperdidos\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14507,8 +14537,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisachados\\Index.cshtml",
+      "TargetPath": "Views\\Animaisachados\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisachados\\Create.cshtml",
+      "TargetPath": "Views\\Animaisachados\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14527,11 +14567,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\TesteNovoPost.cshtml",
-      "TargetPath": "Views\\Pages\\TesteNovoPost.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Details.cshtml",
       "TargetPath": "Views\\Animaisccz\\Details.cshtml",
       "FileKind": "mvc"
@@ -14544,6 +14579,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Create.cshtml",
       "TargetPath": "Views\\Vacinas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AnimalAchadoDetalhes.cshtml",
+      "TargetPath": "Views\\Pages\\AnimalAchadoDetalhes.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14562,6 +14602,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisachados\\Details.cshtml",
+      "TargetPath": "Views\\Animaisachados\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Adocao\\Details.cshtml",
       "TargetPath": "Views\\Adocao\\Details.cshtml",
       "FileKind": "mvc"
@@ -14569,6 +14614,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Home\\Adocao.cshtml",
       "TargetPath": "Views\\Home\\Adocao.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Contatosadocao\\Details.cshtml",
+      "TargetPath": "Views\\Contatosadocao\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14582,6 +14632,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AnimalPerdidoDetalhes.cshtml",
+      "TargetPath": "Views\\Pages\\AnimalPerdidoDetalhes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisccz\\Edit.cshtml",
       "TargetPath": "Views\\Animaisccz\\Edit.cshtml",
       "FileKind": "mvc"
@@ -14592,6 +14647,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisperdidos\\Edit.cshtml",
+      "TargetPath": "Views\\Animaisperdidos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Animaisachados\\Delete.cshtml",
+      "TargetPath": "Views\\Animaisachados\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\CadastrarAnimalPerdido.cshtml",
+      "TargetPath": "Views\\Pages\\CadastrarAnimalPerdido.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vacinas\\Edit.cshtml",
       "TargetPath": "Views\\Vacinas\\Edit.cshtml",
       "FileKind": "mvc"
@@ -14599,6 +14669,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Postsblog\\Index.cshtml",
       "TargetPath": "Views\\Postsblog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Contatosadocao\\Delete.cshtml",
+      "TargetPath": "Views\\Contatosadocao\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

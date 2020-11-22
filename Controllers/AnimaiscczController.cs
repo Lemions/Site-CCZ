@@ -63,20 +63,24 @@ namespace SiteCCZ.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdAnimal,Especie,Sexo,Nome,Foto,IdadeAprox,Porte,Cor,Raca,Historia,StatusAnimal,Adotavel")] Animaisccz animaisccz, IFormFile Foto)
         {
-            if (Foto!= null)
-                {
-                    string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisccz");
-                    var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
-                    string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
-                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+            if (ModelState.IsValid)
+            {
+                if (Foto!= null)
                     {
-                        await Foto.CopyToAsync(stream);
-                    };
-                    animaisccz.Foto = "/img/animaisccz/" + nomeArquivo;
-                }
+                        string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisccz");
+                        var nomeArquivo = Guid.NewGuid().ToString() + " " + Foto.FileName;
+                        string caminhoArquivo = Path.Combine(pasta, nomeArquivo);
+                        using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                        {
+                            await Foto.CopyToAsync(stream);
+                        };
+                        animaisccz.Foto = "/img/animaisccz/" + nomeArquivo;
+                    }
 
-            _context.Add(animaisccz);
-            await _context.SaveChangesAsync();
+                _context.Add(animaisccz);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
             return View(animaisccz);
         }
 

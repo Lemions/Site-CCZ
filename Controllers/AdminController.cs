@@ -47,7 +47,7 @@ namespace SiteCCZ.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if ((model.Email == "thate7061@gmail.com") && (model.Senha == "123456"))
+            if ((model.Email == "ccz_admin@gmail.com") && (model.Senha == "123456"))
             {
                 var claims = new List<Claim>
                 {

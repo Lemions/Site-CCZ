@@ -102,6 +102,8 @@ namespace SiteCCZ.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CadastrarAnimalAchado([Bind("IdAnimalAchado,Foto,DescricaoFoto,Especie,Raca,AchadorNome,AchadorTelefone,Bairro,Detalhes")] Animaisachados animaisachados, IFormFile Foto)
         {
+            if (ModelState.IsValid) 
+            {
                 if (Foto!= null)
                 {
                     string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisachados");
@@ -116,6 +118,8 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisachados);
                 await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(AnimalAchadoDetalhes));
+            }
                 return View(animaisachados);
         }
 
@@ -146,6 +150,8 @@ namespace SiteCCZ.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CadastrarAnimalPerdido([Bind("IdAnimalPerdido,Nome,Especie,Raca,Foto,TelefoneDono,Detalhes")] Animaisperdidos animaisperdidos, IFormFile Foto)
         {
+            if (ModelState.IsValid)
+            {
                 if (Foto!= null)
                 {
                     string pasta = Path.Combine(webHostEnvironment.WebRootPath, "img\\animaisperdidos");
@@ -160,12 +166,9 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisperdidos);
                 await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(AnimalPerdidoDetalhes));
+            }
                 return View(animaisperdidos);
-        }
-
-        public IActionResult TesteNovoPost()
-        {
-            return View();
         }
 
         //GET: Postsblog
