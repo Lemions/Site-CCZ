@@ -22,7 +22,6 @@
                 @Html.DisplayNameFor(model => model.Justificativa)
             </th>
             <th>
-                Id do animal
                 @Html.DisplayNameFor(model => model.IdAnimalNavigation)
             </th>
             <th></th>
@@ -47,8 +46,8 @@
                 @Html.DisplayFor(modelItem => item.IdAnimalNavigation.IdAnimal)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.IdContatoAdocao">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdContatoAdocao">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.IdContatoAdocao">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdContatoAdocao">Excluir</a>
             </td>
         </tr>
 }
