@@ -118,7 +118,7 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisachados);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(AnimalAchadoDetalhes));
+                return View(animaisachados);
             }
                 return View(animaisachados);
         }
@@ -166,7 +166,7 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisperdidos);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(AnimalPerdidoDetalhes));
+                return View(animaisperdidos);
             }
                 return View(animaisperdidos);
         }

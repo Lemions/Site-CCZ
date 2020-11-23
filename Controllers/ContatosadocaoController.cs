@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SiteCCZ.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SiteCCZ.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class ContatosadocaoController : Controller
     {
         private readonly Contexto _context;
