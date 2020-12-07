@@ -7,7 +7,7 @@
 <h1>Detalhes</h1>
 
 <div>
-    <h4>Contatosadocao</h4>
+    <h4>Pedidos de adocao</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -35,10 +35,10 @@
             @Html.DisplayFor(model => model.Justificativa)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdAnimalNavigation)
+            Animal
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdAnimalNavigation.IdAnimal)
+            @Html.DisplayFor(model => model.IdAnimalNavigation.Nome)
         </dd>
     </dl>
 </div>
