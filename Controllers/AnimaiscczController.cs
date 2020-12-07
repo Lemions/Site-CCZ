@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using X.PagedList;
 
 namespace SiteCCZ.Controllers
 {
@@ -27,9 +28,11 @@ namespace SiteCCZ.Controllers
         }
 
         // GET: Animaisccz
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagina)
         {
-            return View(await _context.Animaisccz.ToListAsync());
+            const int itensPorPagina = 5;
+            int numeroPagina = (pagina ?? 1);
+            return View(await _context.Animaisccz.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
         // GET: Animaisccz/Details/5

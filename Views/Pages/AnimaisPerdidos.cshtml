@@ -1,4 +1,6 @@
-@model SiteCCZ.ViewModel.CademeupetViewModel
+@model X.PagedList.IPagedList<SiteCCZ.Models.Animaisperdidos>
+@using X.PagedList.Mvc.Core;
+
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -10,9 +12,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadê meu pet? | Site CCZ</title>
+    <title>Adoção | Site CCZ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/../assets/img/logo-png.png">
+
     <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/../assets/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
@@ -51,49 +54,20 @@
         </div>
     </nav>
 
-
-    <!--INFORMAÇÃO -->
-    <section class="infocademeucao" style="background: #ece4b7;">
-        <div class="container-fluid">
-            <div class="container py-3 text-center">
-                <div class="row mb-5">
-                    <div class="col" style="border-radius:5px; padding: 25px;">
-                        <h1 style="text-align:left;">Cadê meu pet?</h1>
-                        <br>
-                        <p style="text-align: justify">Perdeu seu animal e não faz ideia de onde ele pode estar? Não
-                            se desespere, nós podemos ajudar! O Site CZZ tem uma área reservada só para quem quiser
-                            anunciar, gratuitamente, o animalzinho perdido. O objetivo é formar uma ampla rede de
-                            solidariedade entre donos e amantes de pets, para que, com a ajuda de outros usuários do
-                            site, o dono possa devolver seu cachorro perdido ao lar novamente.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <a asp-action="CadastrarAnimalAchado" asp-controller="Pages" class="btn btn-dark">Encontrei um animal!</a>
-                    </div>
-                    <div class="col">
-                        <a asp-action="CadastrarAnimalPerdido" asp-controller="Pages" class="btn btn-dark">Perdi meu animal!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!--ANIMAIS PERDIDOS-->
+    <!--Área de Adoção-->
     <section class="adocao">
         <div class="container-fluid">
             <div class="container my-3 py-3 text-center">
                 <div class="row mb-5">
                     <div class="col">
-                        <h1 style="text-align: left; margin-left: 10px;">Animais Perdidos</h1>
+                        <h1>Animais perdidos</h1>
+                        <br>
+                        <p>Estes são todos os anúncios de animais perdidos. Veja se o seu está aqui!</p>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                @foreach (var item in Model.AnimalPerdido)
+                @foreach (var item in Model)
                 {
                     <div class="card shadow" style="width: 20rem;">
                     <div class="inner">
@@ -101,50 +75,20 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
-                        <a asp-action="AnimalPerdidoDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalPerdido" class="btn btn-light" style="background:#fc9f5b">Ver
-                            Anúncio</a>
+                        <a asp-action="AnimalPerdidoDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalPerdido" class="btn btn-light" style="background:#fc9f5b">Ver Anúncio</a>
                     </div>
                     </div>
                 }
             </div>
-            <div class="row justify-content-center" style="padding-top: 15px">
-                <a asp-action="AnimaisPerdidos" asp-controller="Pages" class="btn btn-primary">Ver mais</a>
-            </div>
-        </div>
-
-
-    </section>
-    <hr>
-    <!--ANIMAIS ENCONTRADOS-->
-    <section class="adocao">
-        <div class="container-fluid">
-            <div class="container my-3 py-3 text-center">
-                <div class="row mb-5">
-                    <div class="col">
-                        <h1 style="text-align: left; margin-left: 10px;">Animais Encontrados</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                @foreach (var item in Model.AnimalAchado) 
-                {
-                    <div class="card shadow" style="width: 20rem;">
-                        <div class="inner">
-                            <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">@Html.DisplayFor(model => item.Bairro)</h5>
-                            <a asp-action="AnimalAchadoDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimalAchado" class="btn btn-light" style="background:#fc9f5b">Ver
-                            Anúncio</a>
-                        </div>
-                    </div>
-                }
-            </div>
-            <div class="row justify-content-center" style="padding-top: 15px">
-                <a asp-action="AnimaisEncontrados" asp-controller="Pages" class="btn btn-primary">Ver mais</a>
-            </div>
+        
         </div>
     </section>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            @Html.PagedListPager(Model, pagina => Url.Action("AnimaisPerdidos", new { pagina }))
+        </div>
+    </div> 
 
     <br>
     <footer>
@@ -152,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 footer-about wow fadeInUp">
-                       <img src="/../assets/img/logo-png.png" style="width: 200px">
+                        <img src="/../assets/img/logo-png.png" style="width: 200px">
                         <p>Centro de Controle de Zoonozes de Barra Bonita</p>
                     </div>
                     <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
@@ -183,21 +127,6 @@
             </div>
         </div>
     </footer>
-
-    @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-
-    <script type="text/javascript">
-         window.addEventListener('load', function () {
-            document.querySelector('input[type="file"]').addEventListener('change', function () {
-                if (this.files && this.files[0]) {
-                    var img = document.getElementById('PreviewFoto');
-                    img.src = URL.createObjectURL(this.files[0]);
-                }
-            });
-        });
-    </script>
-}
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

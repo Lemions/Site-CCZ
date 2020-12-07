@@ -1,4 +1,5 @@
-@model IEnumerable<SiteCCZ.Models.Postsblog>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SiteCCZ.Models.Postsblog>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +14,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DataPublicacao)
+                Data da Publicação
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Titulo)
+               Título
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Autor)
+                Autor
             </th>
             <th></th>
         </tr>
@@ -45,3 +46,5 @@
 }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))

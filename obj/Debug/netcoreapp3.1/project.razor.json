@@ -14397,6 +14397,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AnimaisEncontrados.cshtml",
+      "TargetPath": "Views\\Pages\\AnimaisEncontrados.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AdocaoEmAnalise.cshtml",
       "TargetPath": "Views\\Pages\\AdocaoEmAnalise.cshtml",
       "FileKind": "mvc"
@@ -14434,6 +14439,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Vermifugos\\Details.cshtml",
       "TargetPath": "Views\\Vermifugos\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\ConfirmacaoAnuncioCadeMeuPet.cshtml",
+      "TargetPath": "Views\\Pages\\ConfirmacaoAnuncioCadeMeuPet.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14659,6 +14669,11 @@
     {
       "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\CadastrarAnimalPerdido.cshtml",
       "TargetPath": "Views\\Pages\\CadastrarAnimalPerdido.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\itsth\\Desktop\\Tcc_Github\\Site-CCZ\\Views\\Pages\\AnimaisPerdidos.cshtml",
+      "TargetPath": "Views\\Pages\\AnimaisPerdidos.cshtml",
       "FileKind": "mvc"
     },
     {

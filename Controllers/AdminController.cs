@@ -52,7 +52,7 @@ namespace SiteCCZ.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, model.Email),
-                    new Claim("FullName", "Marielle"),
+                    new Claim("FullName", "Administrador"),
                     new Claim(ClaimTypes.Role, "Administrador"),
                 };
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

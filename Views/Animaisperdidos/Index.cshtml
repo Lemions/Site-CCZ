@@ -1,4 +1,5 @@
-@model IEnumerable<SiteCCZ.Models.Animaisperdidos>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SiteCCZ.Models.Animaisperdidos>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,29 +7,26 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Especie)
+                Espécie
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Raca)
+                Raça
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Foto)
+                Foto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelefoneDono)
+                Telefone do Dono
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Detalhes)
+                Detalhes
             </th>
             <th></th>
         </tr>
@@ -55,11 +53,13 @@
                 @Html.DisplayFor(modelItem => item.Detalhes)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdAnimalPerdido">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdAnimalPerdido">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdAnimalPerdido">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdAnimalPerdido">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAnimalPerdido">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAnimalPerdido">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))

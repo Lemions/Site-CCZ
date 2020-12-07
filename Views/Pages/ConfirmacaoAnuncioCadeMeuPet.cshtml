@@ -1,6 +1,3 @@
-@using X.PagedList.Mvc.Core;
-@model X.PagedList.IPagedList<SiteCCZ.Models.Animaisccz>
-
 @{
     Layout = null;
     ViewData["Title"] = "Home Page";
@@ -12,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Adoção | Site CCZ</title>
+    <title>Anúncio publicado | Site CCZ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/../assets/img/logo-png.png">
 
@@ -22,18 +19,16 @@
     <link rel="stylesheet" href="/../assets/css/main.css" />
     <link rel="stylesheet" href="/../assets/css/adocao.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="/../assets/img/logo-png.png" alt="Logo CCZ"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarResponsive"> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+        <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" asp-action="Blog" asp-controller="Home">BLOG</a>
@@ -54,77 +49,19 @@
         </div>
     </nav>
 
-    <!-- Banner -->
-    <section class="hero" style="background-image: url(/../assets/img/adocao.jpg);">
-        <div class="hero-inner"></div>
+    <section class="adocao-detalhes" style="background-color: #ece4b7;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <img src="/../assets/img/logofc.png" style="width: 400px;" />
+                </div>
+                <div class="col">
+                    <h1>Seu registro foi publicado. Divulgue também em suas redes sociais. Esperamos que tudo se resolva logo!</h1>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!--Incentivando adoção-->
-    <section class="adocao-incentivo">
-        <div class="container-fluid">
-            <div class="container py-3 text-center">
-                <div class="row mb-5">
-                    <div class="col">
-                       <h1 class="titulo-adocao">Adotar é um ator de amor</h1>
-                       <br>
-                        <p>Adotar um animal é valorizar a vida. Um cão ou gato é capaz de
-                            sentir
-                            emoções e por isso, sofre tanto quanto nós, humanos. É recuperar uma vida literalmente
-                            jogada
-                            fora. Ao adotar um animal carente, você ensina ao seu filho, às crianças com quem você
-                            convive,
-                            verdadeiros valores de responsabilidade, comprometimento e, sobretudo, humanidade.
-                        </p>
-                        <p>
-                            Ao adotar, você ajuda a reduzir o número de cães e gatos abandonados. Geralmente os animais
-                            de
-                            rua ou de abrigos já passaram por muito sofrimento e tudo o que eles precisam é de um bom
-                            lar
-                            para serem felizes de verdade.
-                            E não há recompensa maior do que vê-los se transformarem naquela coisinha alegre e saudável
-                            depois de receberem uma boa dose de cuidados e carinho.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!--Área de Adoção-->
-    <section class="adocao">
-        <div class="container-fluid">
-            <div class="container my-3 py-3 text-center">
-                <div class="row mb-5">
-                    <div class="col">
-                        <h1>Adote</h1>
-                        <br>
-                        <h6><b>Agradecemos seu interesse em adotar um cão ou um gato. Prepare-se para uma experiência gratificante que durará muitos anos.</b></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                @foreach (var item in Model) {
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto) ? Url.Content(item.Foto) : Url.Content("~/img/sem_foto.png"))" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(model => item.Nome)</h5>
-                        <a asp-action="AdocaoDetalhes" asp-controller="Pages" asp-route-id="@item.IdAnimal" class="btn btn-light" style="background:#fc9f5b">Detalhes</a>
-                    </div>
-                </div>
-                }
-            </div>
-        </div>
-    </section>
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            @Html.PagedListPager(Model, pagina => Url.Action("Adocao", new { pagina }))
-        </div>
-    </div>    
-
-    <br>
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -137,7 +74,8 @@
                         <h3>Contato</h3>
                         <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
                         <p><i class="fas fa-phone"></i> Telefone: (14)3641-XXXX</p>
-                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        <p>
+                            <i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
                         </p>
                     </div>
                     <div class="col-md-4 footer-links wow fadeInUp">
@@ -169,13 +107,15 @@
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-      </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
 </body>
 
 </html>

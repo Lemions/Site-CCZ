@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using X.PagedList;
 
 namespace SiteCCZ.Controllers
 {
@@ -41,15 +42,19 @@ namespace SiteCCZ.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Adocao()
+        public async Task<IActionResult> Adocao(int? pagina)
         {
+            const int itensPorPagina = 8;
+            int numeroPagina = (pagina ?? 1);
             ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
-            return View(await _context.Animaisccz.ToListAsync());
+            return View(await _context.Animaisccz.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
-        public async Task<IActionResult> Blog()
+        public async Task<IActionResult> Blog(int? pagina)
         {
-            var postsblog = await _context.Postsblog.ToListAsync();
+            const int itensPorPagina = 6;
+            int numeroPagina = (pagina ?? 1);
+            var postsblog = await _context.Postsblog.ToPagedListAsync(numeroPagina, itensPorPagina);
             ViewData["Caminho"] = webHostEnvironment.WebRootPath;
             return View(postsblog);
         }
@@ -59,9 +64,8 @@ namespace SiteCCZ.Controllers
             CademeupetViewModel model = new CademeupetViewModel();
             model.AnimalAchado = await _context.Animaisachados.OrderByDescending(a => a.IdAnimalAchado).ToListAsync();
             model.AnimalPerdido = await _context.Animaisperdidos.OrderByDescending(a => a.IdAnimalPerdido).ToListAsync();
-            
-            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
 
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
             return View(model);
         }
 

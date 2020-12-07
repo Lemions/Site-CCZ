@@ -1,4 +1,5 @@
-@model IEnumerable<SiteCCZ.Models.Contatosadocao>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SiteCCZ.Models.Contatosadocao>
 
 @{
     ViewData["Title"] = "Index";
@@ -10,19 +11,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                Email
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telefone)
+                Telefone
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Justificativa)
+                Justificativa
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdAnimalNavigation)
+                Id do Animal
             </th>
             <th></th>
         </tr>
@@ -53,3 +54,5 @@
 }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))

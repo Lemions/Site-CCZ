@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using X.PagedList;
 
 namespace SiteCCZ.Controllers
 {
@@ -68,12 +69,32 @@ namespace SiteCCZ.Controllers
             return View(model);
         }
 
- 
-
         public IActionResult AdocaoEmAnalise(AdocaoViewModel model)
         {
             return View(model);
         }
+
+        public IActionResult ConfirmacaoAnuncioCadeMeuPet()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> AnimaisPerdidos(int? pagina)
+        {
+            const int itensPorPagina = 2;
+            int numeroPagina = (pagina ?? 1);
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+            return View(await _context.Animaisperdidos.ToPagedListAsync(numeroPagina, itensPorPagina));
+        }
+
+        public async Task<IActionResult> AnimaisEncontrados(int? pagina)
+        {
+            const int itensPorPagina = 2;
+            int numeroPagina = (pagina ?? 1);
+            ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
+            return View(await _context.Animaisachados.ToPagedListAsync(numeroPagina, itensPorPagina));
+        }
+
 
         public async Task<IActionResult> AnimalAchadoDetalhes(int? id)
         {
@@ -118,7 +139,7 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisachados);
                 await _context.SaveChangesAsync();
-                return View(animaisachados);
+                return RedirectToAction("ConfirmacaoAnuncioCadeMeuPet");
             }
                 return View(animaisachados);
         }
@@ -166,7 +187,7 @@ namespace SiteCCZ.Controllers
 
                 _context.Add(animaisperdidos);
                 await _context.SaveChangesAsync();
-                return View(animaisperdidos);
+                return RedirectToAction("ConfirmacaoAnuncioCadeMeuPet");
             }
                 return View(animaisperdidos);
         }

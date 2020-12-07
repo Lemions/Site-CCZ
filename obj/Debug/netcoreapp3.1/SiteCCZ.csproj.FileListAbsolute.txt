@@ -1020,3 +1020,14 @@ C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\P
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Delete.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Details.cshtml.g.cs
 C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Contatosadocao\Index.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\SiteCCZ.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\bin\Debug\netcoreapp3.1\X.PagedList.Web.Common.dll
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AnimaisEncontrados.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\AnimaisPerdidos.cshtml.g.cs
+C:\Users\itsth\Desktop\Tcc_Github\Site-CCZ\obj\Debug\netcoreapp3.1\Razor\Views\Pages\ConfirmacaoAnuncioCadeMeuPet.cshtml.g.cs

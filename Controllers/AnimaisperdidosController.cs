@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SiteCCZ.Models;
 using Microsoft.AspNetCore.Authorization;
+using X.PagedList;
 
 namespace SiteCCZ.Controllers
 {
@@ -21,9 +22,11 @@ namespace SiteCCZ.Controllers
         }
 
         // GET: Animaisperdidos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagina)
         {
-            return View(await _context.Animaisperdidos.ToListAsync());
+            const int itensPorPagina = 5;
+            int numeroPagina = (pagina ?? 1);
+            return View(await _context.Animaisperdidos.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
         // GET: Animaisperdidos/Details/5

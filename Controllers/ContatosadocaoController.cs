@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SiteCCZ.Models;
 using Microsoft.AspNetCore.Authorization;
+using X.PagedList;
 
 namespace SiteCCZ.Controllers
 {
@@ -21,10 +22,12 @@ namespace SiteCCZ.Controllers
         }
 
         // GET: Contatosadocao
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagina)
         {
+            const int itensPorPagina = 5;
+            int numeroPagina = (pagina ?? 1);
             var contexto = _context.Contatosadocao.Include(c => c.IdAnimalNavigation);
-            return View(await contexto.ToListAsync());
+            return View(await contexto.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
         // GET: Contatosadocao/Details/5

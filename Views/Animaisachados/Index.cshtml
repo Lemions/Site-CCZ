@@ -1,4 +1,5 @@
-@model IEnumerable<SiteCCZ.Models.Animaisachados>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SiteCCZ.Models.Animaisachados>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,35 +7,32 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Foto)
+                Foto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DescricaoFoto)
+                Descricao do Animal
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Especie)
+                Espécie
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Raca)
+                Raça
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AchadorNome)
+                Nome de quem encontrou
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AchadorTelefone)
+                Telefone de quem encontrou
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Bairro)
+                Bairro
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Detalhes)
+                Detalhes
             </th>
             <th></th>
         </tr>
@@ -67,11 +65,13 @@
                 @Html.DisplayFor(modelItem => item.Detalhes)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdAnimalAchado">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdAnimalAchado">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdAnimalAchado">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdAnimalAchado">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAnimalAchado">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAnimalAchado">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))

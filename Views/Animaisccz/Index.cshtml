@@ -1,4 +1,5 @@
-@model IEnumerable<SiteCCZ.Models.Animaisccz>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SiteCCZ.Models.Animaisccz>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Especie)
+                Espécie
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StatusAnimal)
+               Status do Animal
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Adotavel)
+                Adotável?
             </th>
             <th></th>
         </tr>
@@ -51,3 +52,5 @@
 }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
