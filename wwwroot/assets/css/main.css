@@ -195,14 +195,18 @@ h4 {
 	list-style: none;
 	border-radius: 0.25rem;
   }
-  
+
+.form-adocao {
+    margin-left: 10px;
+    margin-right: 10px;
+}
   .pagination span {
 	position: relative;
 	display: block;
 	padding: 0.5rem 0.75rem;
 	margin-left: -1px;
 	line-height: 1.25;
-	color: #e38b4b;
+	color:#111111;
 	background-color: #67f5af;
 	border: 1px solid #67f5af;
 	margin-right: 5px;
@@ -215,7 +219,7 @@ h4 {
 	padding: 0.5rem 0.75rem;
 	margin-left: -1px;
 	line-height: 1.25;
-	color: #e38b4b;
+	color: #111111;
 	background-color: #c7ffe3;
 	border: 1px solid #67f5af;
 	margin-right: 4px;
@@ -239,7 +243,7 @@ h4 {
   
   .pagination li.active .pagination a {
 	z-index: 1;
-	color: #e38b4b;
+	color:#111111;
 	background-color: #e38b4b;
 	border-color: #e38b4b;
   }
@@ -283,3 +287,4 @@ h4 {
 	border-top-right-radius: 0.2rem;
 	border-bottom-right-radius: 0.2rem;
   }
+

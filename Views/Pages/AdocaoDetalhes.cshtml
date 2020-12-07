@@ -55,15 +55,17 @@
     <section class="adocao-detalhes" style="background-color: #ece4b7;">
         <div class="container">
             <div class="row mb-5">
-                <div class="col">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 col-sm-12">
                     <h1 style="color: black; margin-top:60px">@Html.DisplayFor(model => model.Animal.Nome)</h1>
                 </div>
             </div>
             <div class="row mb-5">
-                <div class="col">
-                    <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Animal.Foto) ? Url.Content(Model.Animal.Foto) : Url.Content("~/img/sem_foto.png"))" style="width: 400px;" />
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 col-sm-12">
+                    <img class="img-fluid foto-adocao" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Animal.Foto) ? Url.Content(Model.Animal.Foto) : Url.Content("~/img/sem_foto.png"))" style="width: 400px;" />
                 </div>
-                <div class="col">
+                <div class="col-lg-4 col-sm-12">
                     <dl>
                         <dt style="text-align: left; color: black;">DADOS GERAIS</dt>
                         <dd style="text-align: left; color: black;">@Html.DisplayFor(model => model.Animal.Especie)</dd>
@@ -73,8 +75,7 @@
                         <hr>
 
                         <dt style="text-align: left; color:black;">Estado Clínico</dt>
-                        <dd style="text-align: left; color: black;">Castrado: @Html.DisplayFor(model =>
-                                                                                             model.Animal.StatusAnimal)</dd>
+                        <dd style="text-align: left; color: black;">Castrado: @Html.DisplayFor(model => model.Animal.StatusAnimal)</dd>
                         <dd style="text-align: left; color: black;">Vacinado</dd>
                     </dl>
                 </div>
@@ -119,7 +120,7 @@
     </section>
 
     <!-- FORMULÁRIO -->
-    <div class="row mb-5">
+    <div class="row mb-5 form-adocao">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
             <form asp-action="AdocaoDetalhes">

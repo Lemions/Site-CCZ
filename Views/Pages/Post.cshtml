@@ -49,8 +49,8 @@
         </div>
     </nav>
 
-    <div class="wrapper">
-        <div class="jumbotron titulo-noticia" style="background-image: url('@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.PostBlog.Foto) ? Url.Content(Model.PostBlog.Foto) : Url.Content("~/img/sem_foto.png"))');">
+    <section id="header">
+        <div class="jumbotron titulo-noticia">
             <div class="row">
                 <div class="col-lg-8 texto-cabecalho">
                     <h1>@Html.DisplayFor(model => model.PostBlog.Titulo)</h1><br>
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="container">
         <div class="row">
@@ -72,6 +72,9 @@
                        @Html.DisplayFor(model => model.PostBlog.DataPublicacao) &nbsp;
                     </p>
             </div><br>
+            <div class="img-post-container">
+                <img class="img-post" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.PostBlog.Foto) ? Url.Content(Model.PostBlog.Foto) : Url.Content("~/img/sem_foto.png"))"></img>
+            </div>
             <div class="post-conteudo" style="white-space: pre-line">
                 <p>@Html.DisplayFor(model => model.PostBlog.Conteudo)</p>
             </div>

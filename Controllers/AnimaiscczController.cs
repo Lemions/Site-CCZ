@@ -40,7 +40,7 @@ namespace SiteCCZ.Controllers
             }
             ViewData["Filtro"] = pesquisa;
 
-            var animais = from a in _context.Animaisccz.Include(e => e.Especie).Include(s => s.Sexo) select a;   
+            var animais = from a in _context.Animaisccz select a;   
 
             if (!String.IsNullOrEmpty(pesquisa))
             {

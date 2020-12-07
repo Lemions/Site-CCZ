@@ -22,9 +22,9 @@
 
 }
 /*IMAGEM DO ANIMAL PARA ADOÇÃO*/
-.img {
-  width: 200px;
-  height: 350px;   
+.foto-adocao {
+  width: 50rem;
+  height: auto;   
 }
 
 /*DADOS GERAIS E SAÚDE*/

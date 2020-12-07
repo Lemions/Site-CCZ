@@ -47,7 +47,8 @@ namespace SiteCCZ.Controllers
             const int itensPorPagina = 8;
             int numeroPagina = (pagina ?? 1);
             ViewData["CaminhoFoto"] = webHostEnvironment.WebRootPath;
-            return View(await _context.Animaisccz.ToPagedListAsync(numeroPagina, itensPorPagina));
+            var animais = _context.Animaisccz.Where(a => a.Adotavel.Contains("Sim"));
+            return View(await animais.ToPagedListAsync(numeroPagina, itensPorPagina));
         }
 
         public async Task<IActionResult> Blog(int? pagina)

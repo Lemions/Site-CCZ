@@ -14,10 +14,21 @@
     background-size: cover;
 }
 
-.carousel-item h1,
+
 .carousel-item p, 
 .carousel-item a {
     align-items: center;
+}
+
+@media (min-width: 770px) {
+    .carousel-item h1 {
+        font-size: 3em;
+    }
+    
+}
+
+.carousel-item h1 {
+    font-size: 2.5em;
 }
 
 .carousel-caption{
@@ -28,7 +39,7 @@
 .carousel-caption p{
     width: 80%;
     margin: auto;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.9;
 }
 

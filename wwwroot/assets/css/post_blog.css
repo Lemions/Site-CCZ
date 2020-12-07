@@ -2,11 +2,10 @@
 
 .titulo-noticia {
     margin-top: 40px;
-    background-image: url("preview-img");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('/../assets/img/paws.png');
+    background-color: rgb(16, 126, 84);
     width: 100%;
-    height: 350px;
+    height: 55vh;
 }
 
 .titulo-noticia h1{
@@ -24,8 +23,19 @@
 }
 
 .img-post{
-    height: 250px;
+    height: 23rem;
     width: auto;
+}
+
+@media (max-width:700px){
+    .img-post {
+        height: 16rem;
+        width: auto;
+    }
+}
+
+.img-post-container {
+    text-align: center;
 }
 
 .detalhes-post {
