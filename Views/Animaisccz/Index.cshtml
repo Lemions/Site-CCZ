@@ -10,6 +10,19 @@
 <p>
     <a asp-action="Create">Cadastrar novo animal</a>
 </p>
+
+<form class="form" asp-controller="Animaisccz" asp-action="Index" method="get">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <a asp-action="Create"></a>
+            <input name="Pesquisa" type="text" class="form-control" placeholder="Nome do animal">
+            <div>
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -53,4 +66,11 @@
     </tbody>
 </table>
 
-@Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
+@Html.PagedListPager(Model, pagina => Url.Action("Index", new { filtro = ViewData["Filtro"], pagina }), 
+new X.PagedList.Web.Common.PagedListRenderOptionsBase
+{
+    DisplayLinkToFirstPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+    DisplayLinkToLastPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+    DisplayLinkToNextPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+    DisplayLinkToPreviousPage = X.PagedList.Web.Common.PagedListDisplayMode.Always
+})

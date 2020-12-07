@@ -28,12 +28,31 @@ namespace SiteCCZ.Controllers
         }
 
         // GET: Animaisccz
-        public async Task<IActionResult> Index(int? pagina)
+        public async Task<IActionResult> Index(string filtro, string pesquisa, int? pagina)
         {
-            const int itensPorPagina = 5;
-            int numeroPagina = (pagina ?? 1);
-            return View(await _context.Animaisccz.ToPagedListAsync(numeroPagina, itensPorPagina));
+            if (pesquisa != null)
+            {
+                pagina = 1;
+            }
+            else
+            {
+                pesquisa = filtro;
+            }
+            ViewData["Filtro"] = pesquisa;
+
+            var animais = from a in _context.Animaisccz.Include(e => e.Especie).Include(s => s.Sexo) select a;   
+
+            if (!String.IsNullOrEmpty(pesquisa))
+            {
+                animais = animais.Where(a => a.Nome.Contains(pesquisa)).AsNoTracking();
+            }
+
+            int itensPorPagina = 5;
+
+            return View(await animais.ToPagedListAsync(pagina, itensPorPagina));
         }
+
+
 
         // GET: Animaisccz/Details/5
         public async Task<IActionResult> Details(int? id)
